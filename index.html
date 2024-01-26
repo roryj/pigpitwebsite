@@ -1,50 +1,73 @@
 <!DOCTYPE html>
-<html lang="en-GB"><head>
-	<meta charset="UTF-8">
-<style>
-body {background-color: #000000;}
-.textcenter {
-    text-align: center;
-    color: #fccfa1;
-    font: 14pt palatino;
-    letter-spacing: 5px;
-    text-transform: uppercase;
-    font-weight: bold;
-}
-.textcenter a {
-    color: #fccfa1;
-    text-decoration: none;
-    font: 10pt palatino;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-}
-.textcenter a:hover {
-    color: #89a090;
-}
-.aligncenter {text-align: center;}
-.aligncenter img{
-    display: inline-block;
-    border: 5px solid #000;
-    margin: 5px;
-}
-.vertical-center {
-  margin: 0;
-  position: absolute;
-  top: 50%;
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
-</style>
-    </head>
-<body class="vertical-center">
-    <p class="aligncenter">
-<img src="teaser.png" alt="centered image" />
-    </p>
-    <p class="textcenter">
-    july 27th 2024
-</p>
-    <p class="textcenter">
-    <a href="http://evite.me/AtSfcybdTB">Invite Link</a>
-</p>
+<html lang="en-GB">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            background-color: #000000;
+            margin: 0;
+            padding: 0;
+            font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+        }
 
-</body></html>
+        .container {
+            position: relative;
+            text-align: center;
+            color: #fccfa1;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .textcenter {
+            font-size: 1.5em;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+
+        .textcenter a {
+            color: #fccfa1;
+            text-decoration: none;
+            font-size: 1em;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .textcenter a:hover {
+            color: #89a090;
+        }
+
+        .aligncenter img {
+            max-width: 100%;
+            max-height: 100%;
+        }
+
+        @media (max-width: 600px) {
+            .textcenter {
+                font-size: 1.2em;
+            }
+
+            .textcenter a {
+                font-size: 0.8em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <p class="aligncenter">
+            <img src="teaser.png" alt="centered image" />
+        </p>
+        <p class="textcenter">
+            July 27th, 2024
+        </p>
+        <p class="textcenter">
+        <a href="http://evite.me/AtSfcybdTB"><u>Click Here</u></a>
+        </p>
+    </div>
+</body>
+</html>
