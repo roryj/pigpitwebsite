@@ -47,21 +47,20 @@
             max-height: 100%;
         }
 
-        @media (max-width: 600px) {
-            .textcenter {
-                font-size: 1.2em;
-            }
-
-            .textcenter a {
-                font-size: 0.8em;
-            }
-        }
     </style>
 </head>
 <body>
     <div class="container">
-        <canvas id="2024-costs"></canvas>
-        <canvas id="2023-costs"></canvas>
+        <div>
+            <p class="cost-title">2024 Costs</p>
+            <p id="2024-total-cost" class="total-cost textcenter"></p>
+            <canvas id="2024-costs"></canvas>
+        </div>
+        <div>
+            <p class="cost-title">2023 Costs</p>
+            <p id="2023-total-cost" class="total-cost textcenter"></p>
+            <canvas id="2023-costs"></canvas>
+        </div>
     </div>
 
     <script type="module" src="costs.js"></script>

@@ -7,9 +7,13 @@
 
   costs.forEach(yearlyCostBreakdown => {
     const year = yearlyCostBreakdown["year"]; 
-    const costs = yearlyCostBreakdown["costs"];
+    const expenditures = yearlyCostBreakdown["expenditures"];
 
-    const byCategoryCosts = byCategory(costs);
+    const byCategoryCosts = byCategory(expenditures);
+    const yearlyTotal = totalCost(expenditures);
+
+    const totalCostHtml = document.getElementById(`${year}-total-cost`);
+    totalCostHtml.textContent = `$${yearlyTotal}`;
 
     new Chart(
         document.getElementById(`${year}-costs`),
@@ -19,10 +23,17 @@
                 labels: Object.keys(byCategoryCosts),
                 datasets: [
                     {
-                        label: "$",
                         data: Object.values(byCategoryCosts)
                     }
                 ]
+            },
+            options: {
+                plugins: {
+                    title: {
+                        display: true,
+                        text: 'test this title'
+                    }
+                }
             }
         }
     )
@@ -45,4 +56,13 @@ function byCategory(costs) {
         byCategoryCosts[c.category] = categoryCost
     });
     return byCategoryCosts
+}
+
+/**
+ * 
+ * @param {JSON} expenditures 
+ * @returns {Number} returns the total cost of every item in the year
+ */
+function totalCost(expenditures) {
+    return expenditures.reduce((total, cost) => total + (cost.cost || 0), 0);
 }

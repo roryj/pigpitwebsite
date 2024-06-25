@@ -1,7 +1,7 @@
 [
     {
         "year": "2023",
-        "costs": [
+        "expenditures": [
             {
                 "name":"Photo printer",
                 "cost":242.52,
@@ -36,13 +36,18 @@
                 "name":"Pig",
                 "cost":240,
                 "category":"Food"
+            },
+            {
+                "name":"Pig2",
+                "cost":340,
+                "category":"Food"
             }
         ]
 
     },
     {
         "year": "2024",
-        "costs": [
+        "expenditures": [
             {
                 "name":"Photo printer2",
                 "cost":1,
