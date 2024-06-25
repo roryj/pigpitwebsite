@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script type="module" src="https://cdn.jsdelivr.net/npm/chart.js@4.4.3/dist/chart.umd.min.js"></script>
     <style>
         body {
             background-color: #000000;
@@ -59,18 +60,10 @@
 </head>
 <body>
     <div class="container">
-        <div>
-            <a href="./costs.html">Costs</a>
-        </div>
-        <p class="aligncenter">
-            <img src="teaser.png" alt="centered image" />
-        </p>
-        <p class="textcenter">
-            July 27th, 2024
-        </p>
-        <p class="textcenter">
-        <a href="http://evite.me/AtSfcybdTB"><u>Click Here</u></a>
-        </p>
+        <canvas id="2024-costs"></canvas>
+        <canvas id="2023-costs"></canvas>
     </div>
+
+    <script type="module" src="costs.js"></script>
 </body>
 </html>
