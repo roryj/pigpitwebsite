@@ -4,8 +4,38 @@
         "costs": [
             {
                 "name":"Photo printer",
-                "cost":"242.52",
-                "type":"Supplies"
+                "cost":242.52,
+                "category":"Supplies"
+            },
+            {
+                "name":"Invites",
+                "cost":71.99,
+                "category":"Miscelanious"
+            },
+            {
+                "name":"Burlap",
+                "cost":20.94,
+                "category":"Cooking"
+            },
+            {
+                "name":"MSG",
+                "cost":32.97,
+                "category":"Food"
+            },
+            {
+                "name":"Seasoning and Foil",
+                "cost":99.28,
+                "category":"Cooking"
+            },
+            {
+                "name":"Tarp",
+                "cost":14.32,
+                "category":"Supplies"
+            },
+            {
+                "name":"Pig",
+                "cost":240,
+                "category":"Food"
             }
         ]
 
@@ -15,8 +45,8 @@
         "costs": [
             {
                 "name":"Photo printer2",
-                "cost":"1",
-                "type":"Supplies"
+                "cost":1,
+                "category":"Supplies"
             }
         ]
 

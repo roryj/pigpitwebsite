@@ -1,15 +1,5 @@
 
 (async function() {
-  const data = [
-    { year: 2010, count: 10 },
-    { year: 2011, count: 20 },
-    { year: 2012, count: 15 },
-    { year: 2013, count: 25 },
-    { year: 2014, count: 22 },
-    { year: 2015, count: 30 },
-    { year: 2016, count: 28 },
-  ];
-
   const result = await fetch("./costs.json");
 
   const costs = await result.json();
@@ -19,16 +9,18 @@
     const year = yearlyCostBreakdown["year"]; 
     const costs = yearlyCostBreakdown["costs"];
 
+    const byCategoryCosts = byCategory(costs);
+
     new Chart(
         document.getElementById(`${year}-costs`),
         {
             type: 'bar',
             data: {
-                labels: costs.map(c => c.name),
+                labels: Object.keys(byCategoryCosts),
                 datasets: [
                     {
-                        label: "huh",
-                        data: costs.map(c => c.cost)
+                        label: "$",
+                        data: Object.values(byCategoryCosts)
                     }
                 ]
             }
@@ -36,19 +28,21 @@
     )
   });
 
-//   new Chart(
-//     document.getElementById('2023-costs'),
-//     {
-//       type: 'bar',
-//       data: {
-//         labels: data.map(row => row.year),
-//         datasets: [
-//           {
-//             label: 'Acquisitions by year',
-//             data: data.map(row => row.count)
-//           }
-//         ]
-//       }
-//     }
-//   );
 })();
+
+/**
+ * 
+ * @param {JSON} costs 
+ * @returns {Map} returns a map, where the key is the category name, and the
+ *                  value is the cost for the category
+ */
+function byCategory(costs) {
+    var byCategoryCosts = {};
+
+    costs.forEach(c => {
+        var categoryCost = c.category in byCategoryCosts ? byCategoryCosts[c.category] : 0; 
+        categoryCost += c.cost
+        byCategoryCosts[c.category] = categoryCost
+    });
+    return byCategoryCosts
+}
