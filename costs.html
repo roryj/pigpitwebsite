@@ -10,25 +10,26 @@
             margin: 0;
             padding: 0;
             font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+            max-width: 60%;
         }
 
         .container {
             position: relative;
             text-align: center;
             color: #fccfa1;
-            height: 100vh;
+            /* height: 100vh; */
             display: flex;
             flex-direction: column;
             justify-content: center;
         }
 
-        .centered {
+        /* .centered {
             position: relative;
             text-align: center;
             display: flex;
             flex-direction: column;
             justify-content: center;
-        }
+        } */
 
         .textcenter {
             font-size: 1.5em;
@@ -63,15 +64,41 @@
 
         }
 
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            border: 1px solid;
+            padding: 8px;
+            text-align: left;
+            color: grey;
+        }
+
+        th {
+            font-weight: bold;
+        }
+
     </style>
 </head>
 <body>
-    <div>
+    <div class="container">
         <div>
             <p class="cost-title">2024 Costs</p>
             <div class="centered">
                 <p id="2024-total-cost" class="total-cost textcenter"></p>
                 <canvas id="2024-costs"></canvas>
+                <table id="2024-cost-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Cost</th>
+                            <th>Category</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
             </div>
         </div>
         <div>
@@ -79,6 +106,50 @@
             <div class="centered">
                 <p id="2023-total-cost" class="total-cost textcenter"></p>
                 <canvas id="2023-costs"></canvas>
+                <table id="2023-cost-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Cost</th>
+                            <th>Category</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+        </div>
+        <div>
+            <p class="cost-title">2022 Costs</p>
+            <div class="centered">
+                <p id="2022-total-cost" class="total-cost textcenter"></p>
+                <canvas id="2022-costs"></canvas>
+                <table id="2022-cost-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Cost</th>
+                            <th>Category</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+        </div>
+        <div>
+            <p class="cost-title">2021 Costs</p>
+            <div class="centered">
+                <p id="2021-total-cost" class="total-cost textcenter"></p>
+                <canvas id="2021-costs"></canvas>
+                <table id="2021-cost-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Cost</th>
+                            <th>Category</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
             </div>
         </div>
     </div>

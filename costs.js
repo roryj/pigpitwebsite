@@ -28,7 +28,7 @@
 
         return expenditures.map((exp) => {
             const baseArray = Array(labelOrdering.length).fill(0);
-            baseArray[index] = exp.cost;
+            baseArray[index] = exp.cost.toFixed(2);
             return {
                 data: baseArray,
                 label: exp.name
@@ -36,7 +36,6 @@
         });
     }).flat();
     
-    console.log(`DATASETS: ${datasets}`)
 
     new Chart(
         document.getElementById(`${year}-costs`),
@@ -51,10 +50,6 @@
                     legend: {
                         display: false
                     }
-                    // title: {
-                    //     display: true,
-                    //     text: 'test this title'
-                    // }
                 },
                 responsive: true,
                 scales: {
@@ -67,7 +62,27 @@
                 }
             }
         }
-    )
+    );
+
+    // show table
+    const tableBody = document.getElementById(`${year}-cost-table`);
+    expenditures.forEach(item => {
+        const row = document.createElement('tr');
+
+        const nameCell = document.createElement('td');
+        nameCell.textContent = item.name;
+        row.appendChild(nameCell);
+
+        const costCell = document.createElement('td');
+        costCell.textContent = `$${item.cost.toFixed(2)}`;
+        row.appendChild(costCell);
+
+        const categoryCell = document.createElement('td');
+        categoryCell.textContent = item.category;
+        row.appendChild(categoryCell);
+
+        tableBody.appendChild(row);
+    });
   });
 
 })();
@@ -95,5 +110,5 @@ function byCategory(costs) {
  * @returns {Number} returns the total cost of every item in the year
  */
 function totalCost(expenditures) {
-    return expenditures.reduce((total, cost) => total + (cost.cost || 0), 0);
+    return expenditures.reduce((total, cost) => total + (cost.cost || 0), 0).toFixed(2);
 }

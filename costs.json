@@ -1,5 +1,160 @@
 [
     {
+        "year": "2021",
+        "expenditures": [
+            {
+                "name":"Tarp",
+                "cost":7.48,
+                "category":"Supplies"
+            },
+            {
+                "name":"Rocks for cooking",
+                "cost":23.94,
+                "category":"Supplies"
+            },
+            {
+                "name":"Bigger rocks",
+                "cost":56,
+                "category":"Supplies"
+            },
+            {
+                "name":"Bricks",
+                "cost":75.60,
+                "category":"Supplies"
+            },
+            {
+                "name":"Banana leaves",
+                "cost":22.35,
+                "category":"Supplies"
+            },
+            {
+                "name":"Shovel",
+                "cost":20,
+                "category":"Tools"
+            },
+            {
+                "name":"Pick axe",
+                "cost":31.98,
+                "category":"Tools"
+            },
+            {
+                "name":"Tables",
+                "cost":55,
+                "category":"Miscellaneous"
+            },
+            {
+                "name":"Burlap sacks",
+                "cost":24.26,
+                "category":"Supplies"
+            },
+            {
+                "name":"Pig",
+                "cost":210,
+                "category":"Food"
+            },
+            {
+                "name":"Pig head",
+                "cost":28,
+                "category":"Food"
+            },
+            {
+                "name":"Chicken wire",
+                "cost":20,
+                "category":"Tools"
+            },
+            {
+                "name":"Firewood",
+                "cost":54,
+                "category":"Supplies"
+            },
+            {
+                "name":"Salt",
+                "cost":10,
+                "category":"Food"
+            },
+            {
+                "name":"Utensils",
+                "cost":15,
+                "category":"Supplies"
+            },
+            {
+                "name":"Paper plates",
+                "cost":23,
+                "category":"Supplies"
+            },
+            {
+                "name":"Solo cups",
+                "cost":13,
+                "category":"Supplies"
+            },
+            {
+                "name":"Fire extinguisher",
+                "cost":50,
+                "category":"Miscellaneous"
+            },
+            {
+                "name":"Work gloves",
+                "cost":10,
+                "category":"Tools"
+            },
+            {
+                "name":"Spindrift",
+                "cost":24,
+                "category":"Drinks"
+            },
+            {
+                "name":"Hard seltzer",
+                "cost":50,
+                "category":"Drinks"
+            },
+            {
+                "name":"Keg",
+                "cost":165,
+                "category":"Drinks"
+            }
+        ]
+    },
+    {
+        "year": "2022",
+        "expenditures": [
+            {
+                "name":"Wireless meat thermometers",
+                "cost":168.52,
+                "category":"Tools"
+            },
+            {
+                "name":"Burlap sacks",
+                "cost":55.10,
+                "category":"Cooking"
+            },
+            {
+                "name":"Tarp",
+                "cost":37.38,
+                "category":"Supplies"
+            },
+            {
+                "name":"Wood",
+                "cost":42.93,
+                "category":"Supplies"
+            },
+            {
+                "name":"Ice",
+                "cost":32.96,
+                "category":"Supplies"
+            },
+            {
+                "name":"Pig",
+                "cost":275.00,
+                "category":"Food"
+            },
+            {
+                "name":"Cooler",
+                "cost":109,
+                "category":"Miscellaneous"
+            }
+        ]
+    },
+    {
         "year": "2023",
         "expenditures": [
             {
@@ -83,15 +238,14 @@
                 "category":"Food"
             }
         ]
-
     },
     {
         "year": "2024",
         "expenditures": [
             {
-                "name":"Photo printer2",
-                "cost":1,
-                "category":"Supplies"
+                "name":"Invites",
+                "cost":99.99,
+                "category":"Miscellaneous"
             }
         ]
 
