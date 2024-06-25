@@ -10,7 +10,7 @@
             {
                 "name":"Invites",
                 "cost":71.99,
-                "category":"Miscelanious"
+                "category":"Miscellaneous"
             },
             {
                 "name":"Burlap",
@@ -38,8 +38,48 @@
                 "category":"Food"
             },
             {
-                "name":"Pig2",
-                "cost":340,
+                "name":"Ice",
+                "cost":38.42,
+                "category":"Supplies"
+            },
+            {
+                "name":"Bug traps",
+                "cost":71.00,
+                "category":"Supplies"
+            },
+            {
+                "name":"Rubber mallet",
+                "cost":9.84,
+                "category":"Tools"
+            },
+            {
+                "name":"Costco run #1",
+                "cost":353.69,
+                "category":"Food"
+            },
+            {
+                "name":"Cleaver",
+                "cost":82.69,
+                "category":"Tools"
+            },
+            {
+                "name":"Stage",
+                "cost":348.86,
+                "category":"Supplies"
+            },
+            {
+                "name":"Costco run #2",
+                "cost":225.43,
+                "category":"Food"
+            },
+            {
+                "name":"Band",
+                "cost":200,
+                "category":"Miscellaneous"
+            },
+            {
+                "name":"Keg",
+                "cost":101,
                 "category":"Food"
             }
         ]

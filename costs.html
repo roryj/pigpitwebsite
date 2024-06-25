@@ -22,6 +22,14 @@
             justify-content: center;
         }
 
+        .centered {
+            position: relative;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
         .textcenter {
             font-size: 1.5em;
             letter-spacing: 3px;
@@ -30,7 +38,7 @@
             margin-top: 20px;
         }
 
-        .textcenter a {
+        .textcenter {
             color: #fccfa1;
             text-decoration: none;
             font-size: 1em;
@@ -47,19 +55,31 @@
             max-height: 100%;
         }
 
+        .cost-title {
+            color: #fccfa1;
+            font-weight: bold;   
+            font-size: 4em;
+            margin: 20px 10px;
+
+        }
+
     </style>
 </head>
 <body>
-    <div class="container">
+    <div>
         <div>
             <p class="cost-title">2024 Costs</p>
-            <p id="2024-total-cost" class="total-cost textcenter"></p>
-            <canvas id="2024-costs"></canvas>
+            <div class="centered">
+                <p id="2024-total-cost" class="total-cost textcenter"></p>
+                <canvas id="2024-costs"></canvas>
+            </div>
         </div>
         <div>
             <p class="cost-title">2023 Costs</p>
-            <p id="2023-total-cost" class="total-cost textcenter"></p>
-            <canvas id="2023-costs"></canvas>
+            <div class="centered">
+                <p id="2023-total-cost" class="total-cost textcenter"></p>
+                <canvas id="2023-costs"></canvas>
+            </div>
         </div>
     </div>
 

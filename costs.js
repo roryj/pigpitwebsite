@@ -9,30 +9,61 @@
     const year = yearlyCostBreakdown["year"]; 
     const expenditures = yearlyCostBreakdown["expenditures"];
 
-    const byCategoryCosts = byCategory(expenditures);
+    const byCategoryMapping = byCategory(expenditures);
     const yearlyTotal = totalCost(expenditures);
 
     const totalCostHtml = document.getElementById(`${year}-total-cost`);
-    totalCostHtml.textContent = `$${yearlyTotal}`;
+    totalCostHtml.textContent = `Total: $${yearlyTotal}`;
+
+    const labelOrdering = Object.keys(byCategoryMapping); 
+    console.log(`LABELS: ${labelOrdering}`);
+
+    // with X labels, then we need each dataset to include an array containing the data for that label:
+    // ex: [labelA, labelB, labelC]
+    // with data only applying to labelB, this would mean we would need to write the dataset as
+    // [0, <number needed here>, 0]
+
+    const datasets = Object.entries(byCategoryMapping).map((keyValue, index) => {
+        const expenditures = keyValue[1];
+
+        return expenditures.map((exp) => {
+            const baseArray = Array(labelOrdering.length).fill(0);
+            baseArray[index] = exp.cost;
+            return {
+                data: baseArray,
+                label: exp.name
+            }
+        });
+    }).flat();
+    
+    console.log(`DATASETS: ${datasets}`)
 
     new Chart(
         document.getElementById(`${year}-costs`),
         {
             type: 'bar',
             data: {
-                labels: Object.keys(byCategoryCosts),
-                datasets: [
-                    {
-                        data: Object.values(byCategoryCosts)
-                    }
-                ]
+                labels: labelOrdering,
+                datasets: datasets
             },
             options: {
                 plugins: {
-                    title: {
-                        display: true,
-                        text: 'test this title'
+                    legend: {
+                        display: false
                     }
+                    // title: {
+                    //     display: true,
+                    //     text: 'test this title'
+                    // }
+                },
+                responsive: true,
+                scales: {
+                  x: {
+                    stacked: true,
+                  },
+                  y: {
+                    stacked: true
+                  }
                 }
             }
         }
@@ -45,17 +76,17 @@
  * 
  * @param {JSON} costs 
  * @returns {Map} returns a map, where the key is the category name, and the
- *                  value is the cost for the category
+ *                  value is the array of items in the category
  */
 function byCategory(costs) {
-    var byCategoryCosts = {};
+    var byCategoryMapping = {};
 
     costs.forEach(c => {
-        var categoryCost = c.category in byCategoryCosts ? byCategoryCosts[c.category] : 0; 
-        categoryCost += c.cost
-        byCategoryCosts[c.category] = categoryCost
+        var categoryEntries = c.category in byCategoryMapping ? byCategoryMapping[c.category] : []; 
+        categoryEntries.push(c);
+        byCategoryMapping[c.category] = categoryEntries
     });
-    return byCategoryCosts
+    return byCategoryMapping
 }
 
 /**
