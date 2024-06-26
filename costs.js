@@ -22,7 +22,6 @@
     // ex: [labelA, labelB, labelC]
     // with data only applying to labelB, this would mean we would need to write the dataset as
     // [0, <number needed here>, 0]
-
     const datasets = Object.entries(byCategoryMapping).map((keyValue, index) => {
         const expenditures = keyValue[1];
 

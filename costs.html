@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script type="module" src="https://cdn.jsdelivr.net/npm/chart.js@4.4.3/dist/chart.umd.min.js"></script>
+
+    <!--This is included to allow us to include a sankey chart in the page if we want to. https://github.com/kurkle/chartjs-chart-sankey-->
+    <script type="module" src="https://cdn.jsdelivr.net/npm/chartjs-chart-sankey"></script>
+
     <style>
         body {
             background-color: #000000;
@@ -30,7 +34,7 @@
         .cost-title {
             color: #fccfa1;
             font-weight: bold;   
-            font-size: 2.5em; /* Increased font size for better readability */
+            font-size: 1.5em; /* Increased font size for better readability */
             margin: 20px 0;
         }
 
@@ -70,11 +74,59 @@
             margin-bottom: 20px; /* Space between canvas and table */
         }
 
+        .summary {
+            text-align: left;
+        }
+
+        /* .textcenter a {
+            color: #fccfa1;
+            text-decoration: none;
+            font-size: 1em;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        } */
+        .breadcrumb {
+            text-align: left;
+            padding-top: 20px;
+        }
+
+        .breadcrumb a {
+            text-align: left;
+            padding-top: 20px;
+            color: #ddd;
+        }
+
+        .breadcrumb a:hover {
+            color: #89a090;
+        }
+
     </style>
 </head>
 <body>
     <div class="container">
         <div>
+            <div class="breadcrumb">
+                <a href="index.html">
+                    <= back to the invite
+                </a>
+            </div>
+            <div>
+                <h1>The Cost to Run Pig Pit</h1>
+                <p class="summary">
+                    Pig Pit is a complex operation that takes months of preparation, money,
+                    and the help of many incredible volunteers. To give y'all a better idea of
+                    what it takes to throw this event, we have included below the per-year financial
+                    breakdown of costs for running pig pit. This of course does not include the countless
+                    hours of preparation and support we get.
+                    <br/>
+                    <br/>
+                    Much love from the pig roasters in chief,
+                    <br/>
+                    <br/>
+                    Rory & Elliot
+                </p>
+            </div>
+            <h1>Costs By Year</h1>
             <p class="cost-title">2024 Costs</p>
             <div class="table-container">
                 <p id="2024-total-cost" class="total-cost textcenter"></p>
