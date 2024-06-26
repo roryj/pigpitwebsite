@@ -5,112 +5,112 @@
             {
                 "name":"Tarp",
                 "cost":7.48,
-                "category":"Supplies"
+                "category":"Tools & Supplies"
             },
             {
-                "name":"Rocks for cooking",
+                "name":"Rocks for fie",
                 "cost":23.94,
-                "category":"Supplies"
+                "category":"Tools & Supplies"
             },
             {
                 "name":"Bigger rocks",
                 "cost":56,
-                "category":"Supplies"
+                "category":"Tools & Supplies"
             },
             {
                 "name":"Bricks",
                 "cost":75.60,
-                "category":"Supplies"
+                "category":"Tools & Supplies"
             },
             {
                 "name":"Banana leaves",
                 "cost":22.35,
-                "category":"Supplies"
+                "category":"Food & Drink"
             },
             {
                 "name":"Shovel",
                 "cost":20,
-                "category":"Tools"
+                "category":"Tools & Supplies"
             },
             {
                 "name":"Pick axe",
                 "cost":31.98,
-                "category":"Tools"
+                "category":"Tools & Supplies"
             },
             {
                 "name":"Tables",
                 "cost":55,
-                "category":"Miscellaneous"
+                "category":"Tools & Supplies"
             },
             {
                 "name":"Burlap sacks",
                 "cost":24.26,
-                "category":"Supplies"
+                "category":"Tools & Supplies"
             },
             {
                 "name":"Pig",
                 "cost":210,
-                "category":"Food"
+                "category":"Food & Drink"
             },
             {
                 "name":"Pig head",
                 "cost":28,
-                "category":"Food"
+                "category":"Food & Drink"
             },
             {
                 "name":"Chicken wire",
                 "cost":20,
-                "category":"Tools"
+                "category":"Tools & Supplies"
             },
             {
                 "name":"Firewood",
                 "cost":54,
-                "category":"Supplies"
+                "category":"Tools & Supplies"
             },
             {
                 "name":"Salt",
                 "cost":10,
-                "category":"Food"
+                "category":"Food & Drink"
             },
             {
                 "name":"Utensils",
                 "cost":15,
-                "category":"Supplies"
+                "category":"Tools & Supplies"
             },
             {
                 "name":"Paper plates",
                 "cost":23,
-                "category":"Supplies"
+                "category":"Tools & Supplies"
             },
             {
                 "name":"Solo cups",
                 "cost":13,
-                "category":"Supplies"
+                "category":"Tools & Supplies"
             },
             {
                 "name":"Fire extinguisher",
                 "cost":50,
-                "category":"Miscellaneous"
+                "category":"Tools & Supplies"
             },
             {
                 "name":"Work gloves",
                 "cost":10,
-                "category":"Tools"
+                "category":"Tools & Supplies"
             },
             {
                 "name":"Spindrift",
                 "cost":24,
-                "category":"Drinks"
+                "category":"Food & Drink"
             },
             {
                 "name":"Hard seltzer",
                 "cost":50,
-                "category":"Drinks"
+                "category":"Food & Drink"
             },
             {
                 "name":"Keg",
                 "cost":165,
-                "category":"Drinks"
+                "category":"Food & Drink"
             }
         ]
     },
@@ -120,37 +120,42 @@
             {
                 "name":"Wireless meat thermometers",
                 "cost":168.52,
-                "category":"Tools"
+                "category":"Tools & Supplies"
             },
             {
                 "name":"Burlap sacks",
                 "cost":55.10,
-                "category":"Cooking"
+                "category":"Tools & Supplies"
             },
             {
                 "name":"Tarp",
                 "cost":37.38,
-                "category":"Supplies"
+                "category":"Tools & Supplies"
             },
             {
                 "name":"Wood",
                 "cost":42.93,
-                "category":"Supplies"
+                "category":"Tools & Supplies"
+            },
+            {
+                "name":"Yard waste bags",
+                "cost":10,
+                "category":"Tools & Supplies"
             },
             {
                 "name":"Ice",
                 "cost":32.96,
-                "category":"Supplies"
+                "category":"Food & Drink"
             },
             {
                 "name":"Pig",
                 "cost":275.00,
-                "category":"Food"
+                "category":"Food & Drink"
             },
             {
                 "name":"Cooler",
                 "cost":109,
-                "category":"Miscellaneous"
+                "category":"Tools & Supplies"
             }
         ]
     },
@@ -160,82 +165,82 @@
             {
                 "name":"Photo printer",
                 "cost":242.52,
-                "category":"Supplies"
+                "category":"Tools & Supplies"
             },
             {
                 "name":"Invites",
                 "cost":71.99,
-                "category":"Miscellaneous"
+                "category":"Operations"
             },
             {
                 "name":"Burlap",
                 "cost":20.94,
-                "category":"Cooking"
+                "category":"Tools & Supplies"
             },
             {
                 "name":"MSG",
                 "cost":32.97,
-                "category":"Food"
+                "category":"Food & Drink"
             },
             {
                 "name":"Seasoning and Foil",
                 "cost":99.28,
-                "category":"Cooking"
+                "category":"Food & Drink"
             },
             {
                 "name":"Tarp",
                 "cost":14.32,
-                "category":"Supplies"
+                "category":"Tools & Supplies"
             },
             {
                 "name":"Pig",
                 "cost":240,
-                "category":"Food"
+                "category":"Food & Drink"
             },
             {
                 "name":"Ice",
                 "cost":38.42,
-                "category":"Supplies"
+                "category":"Food & Drink"
             },
             {
                 "name":"Bug traps",
                 "cost":71.00,
-                "category":"Supplies"
+                "category":"Tools & Supplies"
             },
             {
                 "name":"Rubber mallet",
                 "cost":9.84,
-                "category":"Tools"
+                "category":"Tools & Supplies"
             },
             {
                 "name":"Costco run #1",
                 "cost":353.69,
-                "category":"Food"
+                "category":"Food & Drink"
             },
             {
                 "name":"Cleaver",
                 "cost":82.69,
-                "category":"Tools"
+                "category":"Tools & Supplies"
             },
             {
                 "name":"Stage",
                 "cost":348.86,
-                "category":"Supplies"
+                "category":"Tools & Supplies"
             },
             {
                 "name":"Costco run #2",
                 "cost":225.43,
-                "category":"Food"
+                "category":"Tools & Supplies"
             },
             {
                 "name":"Band",
                 "cost":200,
-                "category":"Miscellaneous"
+                "category":"Entertainment"
             },
             {
                 "name":"Keg",
                 "cost":101,
-                "category":"Food"
+                "category":"Food & Drink"
             }
         ]
     },
@@ -245,7 +250,7 @@
             {
                 "name":"Invites",
                 "cost":99.99,
-                "category":"Miscellaneous"
+                "category":"Operations"
             }
         ]
 
