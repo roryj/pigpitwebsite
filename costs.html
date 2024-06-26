@@ -5,63 +5,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script type="module" src="https://cdn.jsdelivr.net/npm/chart.js@4.4.3/dist/chart.umd.min.js"></script>
     <style>
+        /* Include the updated CSS here */
         body {
             background-color: #000000;
             margin: 0;
             padding: 0;
             font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
-            max-width: 60%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* Full height of the viewport */
         }
 
         .container {
-            position: relative;
             text-align: center;
             color: #fccfa1;
-            /* height: 100vh; */
             display: flex;
             flex-direction: column;
             justify-content: center;
-        }
-
-        /* .centered {
-            position: relative;
-            text-align: center;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        } */
-
-        .textcenter {
-            font-size: 1.5em;
-            letter-spacing: 3px;
-            text-transform: uppercase;
-            font-weight: bold;
-            margin-top: 20px;
-        }
-
-        .textcenter {
-            color: #fccfa1;
-            text-decoration: none;
-            font-size: 1em;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-        }
-
-        .textcenter a:hover {
-            color: #89a090;
-        }
-
-        .aligncenter img {
-            max-width: 100%;
-            max-height: 100%;
+            max-width: 80%;
+            margin: auto;
         }
 
         .cost-title {
             color: #fccfa1;
             font-weight: bold;   
-            font-size: 4em;
-            margin: 20px 10px;
+            font-size: 2em;
+            margin: 20px 0;
+        }
 
+        .table-container {
+            margin: 20px 0;
         }
 
         table {
@@ -70,23 +44,32 @@
         }
 
         th, td {
-            border: 1px solid;
+            border: 1px solid #ddd;
             padding: 8px;
             text-align: left;
             color: grey;
         }
 
         th {
+            background-color: #444;
+            color: #fccfa1;
             font-weight: bold;
         }
 
+        tr:nth-child(even) {
+            background-color: #333;
+        }
+
+        tr:hover {
+            background-color: #555;
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <div>
             <p class="cost-title">2024 Costs</p>
-            <div class="centered">
+            <div class="table-container">
                 <p id="2024-total-cost" class="total-cost textcenter"></p>
                 <canvas id="2024-costs"></canvas>
                 <table id="2024-cost-table">
@@ -103,7 +86,7 @@
         </div>
         <div>
             <p class="cost-title">2023 Costs</p>
-            <div class="centered">
+            <div class="table-container">
                 <p id="2023-total-cost" class="total-cost textcenter"></p>
                 <canvas id="2023-costs"></canvas>
                 <table id="2023-cost-table">
@@ -120,7 +103,7 @@
         </div>
         <div>
             <p class="cost-title">2022 Costs</p>
-            <div class="centered">
+            <div class="table-container">
                 <p id="2022-total-cost" class="total-cost textcenter"></p>
                 <canvas id="2022-costs"></canvas>
                 <table id="2022-cost-table">
@@ -137,7 +120,7 @@
         </div>
         <div>
             <p class="cost-title">2021 Costs</p>
-            <div class="centered">
+            <div class="table-container">
                 <p id="2021-total-cost" class="total-cost textcenter"></p>
                 <canvas id="2021-costs"></canvas>
                 <table id="2021-cost-table">
