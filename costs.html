@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script type="module" src="https://cdn.jsdelivr.net/npm/chart.js@4.4.3/dist/chart.umd.min.js"></script>
     <style>
-        /* Include the updated CSS here */
         body {
             background-color: #000000;
             margin: 0;
@@ -14,7 +13,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh; /* Full height of the viewport */
+            min-height: 100vh; /* Full height of the viewport */
         }
 
         .container {
@@ -23,14 +22,15 @@
             display: flex;
             flex-direction: column;
             justify-content: center;
-            max-width: 80%;
+            width: 90%; /* Use more of the available width */
+            max-width: 1200px; /* Limit the maximum width for readability */
             margin: auto;
         }
 
         .cost-title {
             color: #fccfa1;
             font-weight: bold;   
-            font-size: 2em;
+            font-size: 2.5em; /* Increased font size for better readability */
             margin: 20px 0;
         }
 
@@ -63,6 +63,13 @@
         tr:hover {
             background-color: #555;
         }
+
+        canvas {
+            width: 100% !important; /* Ensure canvas uses full width */
+            height: auto !important; /* Maintain aspect ratio */
+            margin-bottom: 20px; /* Space between canvas and table */
+        }
+
     </style>
 </head>
 <body>
