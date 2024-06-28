@@ -1,10 +1,16 @@
 /**
- * The class 
+ * Stores the current state and details for a bubble
  */
 class VolunteerBubble {
     /**
+     * Create the volunteer bubble object
+     *
+     * Given a name, and the max X & Y for the canvas, will generate a
+     * volunteer bubble with a randomized starting point and velocity
      * 
      * @param {String} volunteerName 
+     * @param {Number} maxX
+     * @param {Number} maxY
      */
     constructor(volunteerName, maxX, maxY) {
 
@@ -47,8 +53,7 @@ class VolunteerBubble {
     // This function will do the animation
     function move() {
      
-        // // It clears the specified pixels within
-        // // the given rectangle
+        // Clear out the screen for the redraw
         l.clearRect(0, 0, innerWidth, innerHeight);
 
         volunteerBubbles.forEach((b) => drawBubble(l, b));
@@ -57,7 +62,9 @@ class VolunteerBubble {
 })();
 
 /**
+ * Draws the current volunteer bubble on the HTML canvas
  * 
+ * @param {*} canvas2dContext
  * @param {VolunteerBubble} bubble 
  */
 function drawBubble(canvas2dContext, bubble) {
