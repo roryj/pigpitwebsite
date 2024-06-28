@@ -31,60 +31,10 @@
             margin: auto;
         }
 
-        .cost-title {
-            color: #fccfa1;
-            font-weight: bold;   
-            font-size: 1.5em; /* Increased font size for better readability */
-            margin: 20px 0;
-        }
-
-        .table-container {
-            margin: 20px 0;
-        }
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-        }
-
-        th, td {
-            border: 1px solid #ddd;
-            padding: 8px;
-            text-align: left;
-            color: grey;
-        }
-
-        th {
-            background-color: #444;
-            color: #fccfa1;
-            font-weight: bold;
-        }
-
-        tr:nth-child(even) {
-            background-color: #333;
-        }
-
-        tr:hover {
-            background-color: #555;
-        }
-
         canvas {
             width: 100% !important; /* Ensure canvas uses full width */
             height: auto !important; /* Maintain aspect ratio */
-           /* margin-bottom: 20px; /* Space between canvas and table */
         }
-
-        .summary {
-            text-align: left;
-        }
-
-        /* .textcenter a {
-            color: #fccfa1;
-            text-decoration: none;
-            font-size: 1em;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-        } */
         .breadcrumb {
             text-align: left;
             padding-top: 20px;
@@ -104,9 +54,16 @@
 </head>
 <body>
     <div class="container">
-        <h1>GeeksforGeeks</h1>
-        <h3>Bouncing ball using JavaScript</h3>
-        <canvas id="volunteer-canvas"></canvas>
+        <div class="breadcrumb">
+            <a href="index.html">
+                <= back to the invite
+            </a>
+        </div>
+        <div>
+            <h1>Pig Pit Volunteers</h1>
+            <h3>Pig Pit wouldn't be the event it is without the help of these incredible people!</h3>
+            <canvas id="volunteer-canvas"></canvas>
+        </div>
     </div>
     <script type="module" src="volunteers.js"></script>
 </body>

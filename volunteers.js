@@ -6,22 +6,30 @@ class VolunteerBubble {
      * 
      * @param {String} volunteerName 
      */
-    constructor(volunteerName) {
+    constructor(volunteerName, maxX, maxY) {
+
+        let potentialX = Math.floor(Math.random() * maxX);
+        // now make it not attached to the edge
+        potentialX = Math.max(potentialX, 50);
+        potentialX = Math.min(potentialX, maxX - 50);
+
+        let potentialY = Math.floor(Math.random() * maxY);
+        // now make it not attached to the edge
+        potentialY = Math.max(potentialY, 50);
+        potentialY = Math.min(potentialY, maxY - 50);
+
+
         this.name = volunteerName;
-        this.x = 100;
-        this.y = 100;
-        this.velocityX = 5;
-        this.velocityY = 2;
+        this.x = potentialX;
+        this.y = potentialY;
+        this.velocityX = Math.floor(3 + (Math.random() * 4));
+        this.velocityY = Math.floor(3 + (Math.random() * 4));
         this.radius = 50;
     }
 }
 
 (async function() {
-    const volunteers = ["Rory", "Elliot"];
-
-    var circles = [
-        
-    ];
+    const volunteers = ["Hope M.", "Xen E.", "Tom P.", "Colleen C.", "Casey H.", "Maseo B.", "Alex"];
 
     let canvas = document.getElementById("volunteer-canvas");
  
@@ -31,16 +39,8 @@ class VolunteerBubble {
     let l = canvas.getContext('2d');
 
     const volunteerBubbles = volunteers.map((v) => {
-        return new VolunteerBubble(v)
+        return new VolunteerBubble(v, innerWidth, innerHeight)
     });
-     
-    // x and y are the coordinates of the circle
-    // vx and vy are the respective speeds
-    let x = Math.floor(Math.random() * innerWidth);
-    let y = Math.floor(Math.random() * innerHeight);
-    let vx = Math.floor(Math.random() * 2);
-    let vy = Math.floor(Math.random() * 4);
-    let radius = 50;
      
     move();
      
@@ -63,12 +63,12 @@ class VolunteerBubble {
 function drawBubble(canvas2dContext, bubble) {
     // Creating a circle
     canvas2dContext.beginPath();
-    canvas2dContext.strokeStyle = "white";
+    canvas2dContext.strokeStyle = "#fccfa1";
     canvas2dContext.arc(bubble.x, bubble.y, bubble.radius, 0, Math.PI * 2, false);
     canvas2dContext.stroke();
 
-    canvas2dContext.font = '16pt Calibri';
-    canvas2dContext.fillStyle = 'white';
+    canvas2dContext.font = '16pt Palatino Linotype';
+    canvas2dContext.fillStyle = '#fccfa1';
     canvas2dContext.textAlign = 'center';
     canvas2dContext.fillText(bubble.name, bubble.x, bubble.y+3);
     
