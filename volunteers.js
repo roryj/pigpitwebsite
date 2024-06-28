@@ -24,7 +24,7 @@ class VolunteerBubble {
         this.y = potentialY;
         this.velocityX = Math.floor(3 + (Math.random() * 4));
         this.velocityY = Math.floor(3 + (Math.random() * 4));
-        this.radius = 50;
+        this.radius = 60;
     }
 }
 
@@ -67,7 +67,7 @@ function drawBubble(canvas2dContext, bubble) {
     canvas2dContext.arc(bubble.x, bubble.y, bubble.radius, 0, Math.PI * 2, false);
     canvas2dContext.stroke();
 
-    canvas2dContext.font = '16pt Palatino Linotype';
+    canvas2dContext.font = '18pt Palatino Linotype';
     canvas2dContext.fillStyle = '#fccfa1';
     canvas2dContext.textAlign = 'center';
     canvas2dContext.fillText(bubble.name, bubble.x, bubble.y+3);
