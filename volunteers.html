@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script type="module" src="https://cdn.jsdelivr.net/npm/chart.js@4.4.3/dist/chart.umd.min.js"></script>
+
+    <!--This is included to allow us to include a sankey chart in the page if we want to. https://github.com/kurkle/chartjs-chart-sankey-->
+    <script type="module" src="https://cdn.jsdelivr.net/npm/chartjs-chart-sankey"></script>
+
+    <style>
+        body {
+            background-color: #000000;
+            margin: 0;
+            padding: 0;
+            font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh; /* Full height of the viewport */
+        }
+
+        .container {
+            text-align: center;
+            color: #fccfa1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 90%; /* Use more of the available width */
+            max-width: 1200px; /* Limit the maximum width for readability */
+            margin: auto;
+        }
+
+        .cost-title {
+            color: #fccfa1;
+            font-weight: bold;   
+            font-size: 1.5em; /* Increased font size for better readability */
+            margin: 20px 0;
+        }
+
+        .table-container {
+            margin: 20px 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+            color: grey;
+        }
+
+        th {
+            background-color: #444;
+            color: #fccfa1;
+            font-weight: bold;
+        }
+
+        tr:nth-child(even) {
+            background-color: #333;
+        }
+
+        tr:hover {
+            background-color: #555;
+        }
+
+        canvas {
+            width: 100% !important; /* Ensure canvas uses full width */
+            height: auto !important; /* Maintain aspect ratio */
+           /* margin-bottom: 20px; /* Space between canvas and table */
+        }
+
+        .summary {
+            text-align: left;
+        }
+
+        /* .textcenter a {
+            color: #fccfa1;
+            text-decoration: none;
+            font-size: 1em;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        } */
+        .breadcrumb {
+            text-align: left;
+            padding-top: 20px;
+        }
+
+        .breadcrumb a {
+            text-align: left;
+            padding-top: 20px;
+            color: #ddd;
+        }
+
+        .breadcrumb a:hover {
+            color: #89a090;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>GeeksforGeeks</h1>
+        <h3>Bouncing ball using JavaScript</h3>
+        <canvas id="volunteer-canvas"></canvas>
+    </div>
+    <script type="module" src="volunteers.js"></script>
+</body>
+</html>
