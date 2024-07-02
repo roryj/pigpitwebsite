@@ -28,16 +28,42 @@ class VolunteerBubble {
         this.name = volunteerName;
         this.x = potentialX;
         this.y = potentialY;
-        this.velocityX = Math.floor(3 + (Math.random() * 4));
-        this.velocityY = Math.floor(3 + (Math.random() * 4));
+        this.velocityX = Math.floor(2 + (Math.random() * 4));
+        this.velocityY = Math.floor(2 + (Math.random() * 4));
         this.radius = 60;
+        this.colour = '#fccfa1';
     }
+
+    getText(debug) {
+        if (debug) {
+            return `${this.name}\n(${this.x},${this.y})`
+        }
+
+        return this.name;
+    }
+
+    isHit(x, y) {
+        const radiusWithBuffer = this.radius * 1.5;
+
+        const bubbleTop = Math.max(this.y - radiusWithBuffer, 0);
+        const bubbleBottom = this.y + radiusWithBuffer;
+        const bubbleLeft = Math.max(this.x - radiusWithBuffer);
+        const bubbleRight = this.x + radiusWithBuffer;
+
+        // console.log(`left: ${bubbleLeft}, right: ${bubbleRight}, top: ${bubbleTop}, bottom: ${bubbleBottom}`)
+
+        return y < bubbleBottom && y > bubbleTop && x > bubbleLeft && x < bubbleRight;
+    }
+
 }
 
 (async function() {
     const volunteers = ["Hope M.", "Xen E.", "Tom P.", "Colleen C.", "Casey H.", "Maseo B.", "Alex"];
 
+
     let canvas = document.getElementById("volunteer-canvas");
+    console.log(`${canvas.offsetTop}, ${canvas.clientTop}`)
+
  
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
@@ -47,7 +73,7 @@ class VolunteerBubble {
     const volunteerBubbles = volunteers.map((v) => {
         return new VolunteerBubble(v, innerWidth, innerHeight)
     });
-     
+
     move();
      
     // This function will do the animation
@@ -59,7 +85,39 @@ class VolunteerBubble {
         volunteerBubbles.forEach((b) => drawBubble(l, b));
         requestAnimationFrame(move);
     }
+
+    canvas.addEventListener('click', function(event) {
+        // I am getting the offset here during the click event because for some reason if I get this
+        // earlier on, the canvas offset is significantly higher than it should be. Maybe something with
+        // the DOM loading later than the canvas value is set? Don't know. But this works
+        let canvasLeft = canvas.offsetLeft + canvas.clientLeft;
+        let canvasTop = canvas.offsetTop + canvas.clientTop;
+        // console.log(`${canvas.offsetTop}, ${canvas.clientTop}`)
+        // console.log(`Layer: (${event.layerX},${event.layerY}) Page: (${event.pageX},${event.pageY})`)
+        var clickX = event.layerX - canvasLeft;
+        var clickY = event.layerY - canvasTop;
+
+        // console.log(`clicked (${clickX},${clickY})`)
+
+        volunteerBubbles.forEach(function(bubble) {
+            console.log(bubble.getText(true))
+            if (bubble.isHit(clickX, clickY)) {
+                bubble.colour = chooseRandomColour()
+            }
+
+        });
+
+    });
 })();
+
+/**
+ * Generates a random colour based off the hue saturation lightness alpha model
+ *
+ * @returns Returns a random colour
+ */
+function chooseRandomColour() {
+    return 'hsla(' + (Math.random() * 360) + ', 100%, 50%, 1)';
+}
 
 /**
  * Draws the current volunteer bubble on the HTML canvas
@@ -70,14 +128,14 @@ class VolunteerBubble {
 function drawBubble(canvas2dContext, bubble) {
     // Creating a circle
     canvas2dContext.beginPath();
-    canvas2dContext.strokeStyle = "#fccfa1";
+    canvas2dContext.strokeStyle = bubble.colour;
     canvas2dContext.arc(bubble.x, bubble.y, bubble.radius, 0, Math.PI * 2, false);
     canvas2dContext.stroke();
 
     canvas2dContext.font = '18pt Palatino Linotype';
-    canvas2dContext.fillStyle = '#fccfa1';
+    canvas2dContext.fillStyle = bubble.colour;
     canvas2dContext.textAlign = 'center';
-    canvas2dContext.fillText(bubble.name, bubble.x, bubble.y+3);
+    canvas2dContext.fillText(bubble.getText(false), bubble.x, bubble.y+3);
     
     
     // Conditions so that the ball bounces
