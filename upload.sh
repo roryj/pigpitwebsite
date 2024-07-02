@@ -11,9 +11,10 @@ echo "uploading js files to $BUCKET"
 find . -name "*.js" -type f -exec aws s3 cp {} "s3://$BUCKET" \;
 
 echo "uploading json files to $BUCKET"
-aws s3 cp ./*.json "s3://$BUCKET"
+find . -name "*.json" -type f -exec aws s3 cp {} "s3://$BUCKET" \;
 
 echo "uploading image files to $BUCKET"
-aws s3 cp ./*.png "s3://$BUCKET"
+find . -name "*.png" -type f -exec aws s3 cp {} "s3://$BUCKET" \;
+find . -name "*.jpg" -type f -exec aws s3 cp {} "s3://$BUCKET" \;
 
 echo "DONE"
