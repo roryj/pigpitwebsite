@@ -19,6 +19,8 @@
             display: flex;
             flex-direction: column;
             justify-content: center;
+            align-items: center;
+            max-width: 1300px;
         }
 
         .textcenter {
@@ -27,6 +29,9 @@
             text-transform: uppercase;
             font-weight: bold;
             margin-top: 20px;
+            position: absolute;
+            width: fit-content;
+            width: inherit;
         }
 
         .textcenter a {
@@ -41,6 +46,33 @@
             color: #89a090;
         }
 
+        .first-text,
+        .second-text,
+        .third-text,
+        .copyright {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+
+        .first-text {
+            bottom: 15%;
+        }
+
+        .second-text {
+            bottom: 10%;
+        }
+
+        .third-text {
+            bottom: 5%;
+        }
+
+        .copyright {
+            font-size: small;
+            bottom: 0;
+        }
+
         .aligncenter img {
             max-width: 100%;
             max-height: 100%;
@@ -52,30 +84,39 @@
             }
 
             .textcenter a {
-                font-size: 0.8em;
+                font-size: 0.6em;
+            }
+
+            .first-text {
+                bottom: 30%;
+            }
+
+            .second-text {
+                bottom: 25%;
+            }
+
+            .third-text {
+                bottom: 20%;
+            }
+            .copyright {
+                bottom: 15%
             }
         }
 
-        .copyright {
-            font-size: small;
-        }
     </style>
 </head>
 <body>
     <div class="container">
         <p class="aligncenter">
-            <img src="teaser.png" alt="centered image" />
+            <img src="pigpit4_empty_flyer.jpg" alt="centered image" />
         </p>
-        <p class="textcenter">
-            July 27th, 2024
-        </p>
-        <p class="textcenter">
+        <p class="textcenter first-text">
             <a href="http://evite.me/AtSfcybdTB"><u>Click Here for invite</u></a>
         </p>
-        <p class="textcenter">
+        <p class="textcenter second-text">
             <a href="volunteers.html"><u>Our amazing volunteers</u></a>
         </p>
-        <p class="textcenter">
+        <p class="textcenter third-text">
             <a href="costs.html"><u>What does it take to put on pig pit?</u></a>
         </p>
 
