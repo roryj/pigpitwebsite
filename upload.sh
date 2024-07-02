@@ -16,5 +16,6 @@ find . -name "*.json" -type f -exec aws s3 cp {} "s3://$BUCKET" \;
 echo "uploading image files to $BUCKET"
 find . -name "*.png" -type f -exec aws s3 cp {} "s3://$BUCKET" \;
 find . -name "*.jpg" -type f -exec aws s3 cp {} "s3://$BUCKET" \;
+find . -name "*.svg" -type f -exec aws s3 cp {} "s3://$BUCKET" \;
 
 echo "DONE"
