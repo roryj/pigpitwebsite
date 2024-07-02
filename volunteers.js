@@ -104,25 +104,31 @@ class VolunteerBubble {
         // I am getting the offset here during the click event because for some reason if I get this
         // earlier on, the canvas offset is significantly higher than it should be. Maybe something with
         // the DOM loading later than the canvas value is set? Don't know. But this works
-        let canvasLeft = canvas.offsetLeft + canvas.clientLeft;
-        let canvasTop = canvas.offsetTop + canvas.clientTop;
+        // let canvasLeft = canvas.offsetLeft + canvas.clientLeft;
+        // let canvasTop = canvas.offsetTop + canvas.clientTop;
         // console.log(`${canvas.offsetTop}, ${canvas.clientTop}`)
         // console.log(`Layer: (${event.layerX},${event.layerY}) Page: (${event.pageX},${event.pageY})`)
 
-        let clickX = event.layerX;
-        let clickY = event.layerY;
+        let clickX = event.offsetX;
+        let clickY = event.offsetY;
 
-        // ALSO!!!! On my phone (MouseEvent) the offset event layer doesnt need an offset. Unlike the PointerEvent
-        // seen from the browser
-        const eventType = event.__proto__.constructor.name;
-        // This means that if we are receiving a pointer event, we have to subtract the canvas offsets to get the correct
-        // point in the canvas. If it is not a pointer event, we do not do this...
-        if (eventType == 'PointerEvent') {
-            clickX -= canvasLeft;
-            clickY -= canvasTop;
-        }
+        // // ALSO!!!! On my phone (MouseEvent) the offset event layer doesnt need an offset. Unlike the PointerEvent
+        // // seen from the browser
+        // const eventType = event.__proto__.constructor.name;
+        // // This means that if we are receiving a pointer event, we have to subtract the canvas offsets to get the correct
+        // // point in the canvas. If it is not a pointer event, we do not do this...
+        // if (eventType == 'PointerEvent') {
+        //     // clickX -= canvasLeft;
+        //     // clickY -= canvasTop;
+        // }
 
-        // console.log(`clicked (${clickX},${clickY})`)
+        // // Firefox uses mouse events. Which has the offsetX and Y values 
+        // if (eventType == 'MouseEvent') {
+        //     clickX = event.offsetX;
+        //     clickY = event.offsetY;
+        // }
+
+        console.log(`clicked (${clickX},${clickY})`)
 
         // debugDiv.textContent = `TYPE: ${event.__proto__.constructor.name} | layer: (${event.layerX},${event.layerY}) | offset: (${event.offsetX},${event.offsetY}) | clicked (${clickX},${clickY}) | ${canvasLeft},${canvasTop} | ${canvas.offsetLeft} ^ ${canvas.clientLeft} | ${canvas.offsetTop} ^ ${canvas.clientTop}`
 
