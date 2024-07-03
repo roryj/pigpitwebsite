@@ -251,6 +251,21 @@
                 "name":"Invites",
                 "cost":99.99,
                 "category":"Operations"
+            },
+            {
+                "name": "Logo commission",
+                "cost": 75,
+                "category": "Merch"
+            },
+            {
+                "name": "Shirts and Totes",
+                "cost": 2471.34,
+                "category": "Merch"
+            },
+            {
+                "name": "Stickers & Temp Tattoos",
+                "cost": 209.73,
+                "category": "Merch"
             }
         ]
 
