@@ -306,6 +306,11 @@
                 "name": "Extension cords",
                 "cost": 430,
                 "category": "Operations"
+            },
+            {
+                "name": "Rocks",
+                "cost": 94.78,
+                "category": "Tools & Supplies"
             }
         ]
     }
