@@ -296,6 +296,16 @@
                 "name": "Bug traps",
                 "cost": 55,
                 "category": "Operations"
+            },
+            {
+                "name": "Meat injector",
+                "cost": 19,
+                "category": "Tools & Supplies"
+            },
+            {
+                "name": "Extension cords",
+                "cost": 430,
+                "category": "Operations"
             }
         ]
     }
