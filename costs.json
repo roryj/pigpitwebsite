@@ -266,8 +266,37 @@
                 "name": "Stickers & Temp Tattoos",
                 "cost": 209.73,
                 "category": "Merch"
+            },
+            {
+                "name": "Bands",
+                "cost": 1500,
+                "category": "Entertainment"
+            },
+            {
+                "name": "Heat Sealer",
+                "cost": 34,
+                "category": "Tools & Supplies"
+            },
+            {
+                "name": "Burlap",
+                "cost": 19.92,
+                "category": "Tools & Supplies"
+            },
+            {
+                "name": "Tarp",
+                "cost": 14.33,
+                "category": "Tools & Supplies"
+            },
+            {
+                "name": "Wheelbarrow",
+                "cost": 132,
+                "category": "Tools & Supplies"
+            },
+            {
+                "name": "Bug traps",
+                "cost": 55,
+                "category": "Operations"
             }
         ]
-
     }
 ]
