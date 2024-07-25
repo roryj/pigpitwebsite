@@ -311,6 +311,61 @@
                 "name": "Rocks",
                 "cost": 94.78,
                 "category": "Tools & Supplies"
+            },
+            {
+                "name": "Seasoning",
+                "cost": 85,
+                "category": "Food & Drink"
+            },
+            {
+                "name": "Potatos & Onions",
+                "cost": 27,
+                "category": "Food & Drink"
+            },
+            {
+                "name": "Plates and Cups",
+                "cost": 33,
+                "category": "Tools & Supplies"
+            },
+            {
+                "name": "Salt",
+                "cost": 18.96,
+                "category": "Food & Drink"
+            },
+            {
+                "name": "Casement Window Seal",
+                "cost": 24.47,
+                "category": "Tools & Supplies"
+            },
+            {
+                "name": "Ice Packs",
+                "cost": 16.33,
+                "category": "Tools & Supplies"
+            },
+            {
+                "name": "Bulk Picnic Blankets",
+                "cost": 61.78,
+                "category": "Tools & Supplies"
+            },
+            {
+                "name": "Banana leaves",
+                "cost": 7,
+                "category": "Tools & Supplies"
+            },
+            {
+                "name": "Chicken wire",
+                "cost": 23.13,
+                "category": "Tools & Supplies"
+            },
+            {
+                "name": "Pig",
+                "cost": 320,
+                "category": "Food & Drink"
+            },
+            {
+                "name": "Seasoning & Salt",
+                "cost": 37.94,
+                "category": "Tools & Supplies"
             }
         ]
     }
