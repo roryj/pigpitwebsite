@@ -68,6 +68,23 @@ class VolunteerBubble {
         return y < bubbleBottom && y > bubbleTop && x > bubbleLeft && x < bubbleRight;
     }
 
+    /**
+     * Increases the velocity of the bubble
+     */
+    increaseVelocity() {
+        if (this.velocityX > 0) {
+            this.velocityX = this.velocityX + 5;
+        } else {
+            this.velocityX = this.velocityX - 5;
+        }
+
+        if (this.velocityY > 0) {
+            this.velocityY = this.velocityY + 5;
+        } else {
+            this.velocityY = this.velocityY - 5;
+        }
+    }
+
 }
 
 (async function() {
@@ -136,6 +153,7 @@ class VolunteerBubble {
             console.log(bubble.getText(true))
             if (bubble.isHit(clickX, clickY)) {
                 bubble.colour = chooseRandomColour()
+                bubble.increaseVelocity()
             }
 
         });
