@@ -88,7 +88,7 @@ class VolunteerBubble {
 }
 
 (async function() {
-    const volunteers = ["Hope M.", "Xen E.", "Tom P.", "Colleen C.", "Casey H.", "Maseo B.", "Alex", "Greg G.", "Austin", "Matt F."];
+    const volunteers = ["Hope M.", "Xen E.", "Tom P.", "Colleen C.", "Casey H.", "Maseo B.", "Alex", "Greg G.", "Matt F.", "Mew", "Anna W.", "Mike G.", "Mike C."];
 
     const debugDiv = document.getElementById('debug-info');
 
