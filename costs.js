@@ -10,10 +10,13 @@
     const expenditures = yearlyCostBreakdown["expenditures"];
 
     const byCategoryMapping = byCategory(expenditures);
-    const yearlyTotal = totalCost(expenditures);
+
+    const yearlyTotalCosts = totalCosts(expenditures);
+    const yearlyTotalRevenue = totalRevenue(expenditures);
+    const yearlyTotalOperatingExpense = (yearlyTotalCosts + yearlyTotalRevenue).toFixed(2);
 
     const totalCostHtml = document.getElementById(`${year}-total-cost`);
-    totalCostHtml.textContent = `Total: $${yearlyTotal}`;
+    totalCostHtml.textContent = `Operating Cost: ($${yearlyTotalCosts})\r\n\r\nRevenue: $${-yearlyTotalRevenue}\r\n\r\nTotal: ($${yearlyTotalOperatingExpense})`;
 
     const labelOrdering = Object.keys(byCategoryMapping); 
     console.log(`LABELS: ${labelOrdering}`);
@@ -104,10 +107,17 @@ function byCategory(costs) {
 }
 
 /**
- * 
  * @param {JSON} expenditures 
- * @returns {Number} returns the total cost of every item in the year
+ * @returns {Number} returns the total for all purchases for a given year
  */
-function totalCost(expenditures) {
-    return expenditures.reduce((total, cost) => total + (cost.cost || 0), 0).toFixed(2);
+function totalCosts(expenditures) {
+    return parseFloat(expenditures.filter((item, _a, _b) => item.cost > 0).reduce((total, cost) => total + (cost.cost || 0), 0).toFixed(2));
+}
+
+/**
+ * @param {JSON} expenditures
+ * @returns {Number} returns the total for all revenue for a given year
+ */
+function totalRevenue(expenditures) {
+    return parseFloat(expenditures.filter((item, _a, _b) => item.cost < 0).reduce((total, cost) => total + (cost.cost || 0), 0).toFixed(2));
 }

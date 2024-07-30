@@ -156,6 +156,11 @@
                 "name":"Cooler",
                 "cost":109,
                 "category":"Tools & Supplies"
+            },
+            {
+                "name": "Donations",
+                "cost": -450,
+                "category": "Operations"
             }
         ]
     },
@@ -241,6 +246,11 @@
                 "name":"Keg",
                 "cost":101,
                 "category":"Food & Drink"
+            },
+            {
+                "name": "Donations",
+                "cost": -545,
+                "category": "Operations"
             }
         ]
     },
@@ -366,6 +376,71 @@
                 "name": "Seasoning & Salt",
                 "cost": 37.94,
                 "category": "Tools & Supplies"
+            },
+            {
+                "name": "Yard waste cleanup",
+                "category": "Operations",
+                "cost":  750.05
+            },
+            {
+                "name": "Seasoning + Salt",
+                "category": "Food & Drink",
+                "cost": 65
+            },
+            {
+                "name": "Bleach",
+                "category": "Tools & Supplies",
+                "cost": 21.13
+            },
+            {
+                "name": "Chicken, brisket, veggies",
+                "category": "Food & Drink",
+                "cost": 272.41
+            },
+            {
+                "name": "Security",
+                "category": "Operations",
+                "cost": 600
+            },
+            {
+                "name": "Keg",
+                "category": "Food & Drink",
+                "cost": 110
+            },
+            {
+                "name": "Meat injection ingredients",
+                "category": "Food & Drink",
+                "cost": 10
+            },
+            {
+                "name": "Index cards for food",
+                "category": "Tools & Supplies",
+                "cost": 5
+            },
+            {
+                "name": "Merch purchases",
+                "category": "Merch",
+                "cost": -2793.69
+            },
+            {
+                "name": "Sparkling water",
+                "category": "Tools & Supplies",
+                "cost": 54.01
+            },
+            {
+                "name": "Post event trash removal",
+                "category": "Operations",
+                "cost": 112.18
+            },
+            {
+                "name": "Extra plates + forks",
+                "category": "Tools & Supplies",
+                "cost": 22.78
+            },
+            {
+                "name": "MSG",
+                "category": "Food & Drink",
+                "cost": 19.98
             }
         ]
     }
