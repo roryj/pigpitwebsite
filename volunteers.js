@@ -88,7 +88,8 @@ class VolunteerBubble {
 }
 
 (async function() {
-    const volunteers = ["Hope M.", "Xen E.", "Casey H.", "Maseo B.", "Alex D.", "Greg G.", "Matt F.", "Mew", "Anna W.", "Mike G.", "Mike C.", "Erik B.", "Kelsie W.", "Austin B."];
+
+    let volunteerBubbles = [];
 
     const debugDiv = document.getElementById('debug-info');
 
@@ -101,9 +102,14 @@ class VolunteerBubble {
      
     let l = canvas.getContext('2d');
 
-    const volunteerBubbles = volunteers.map((v) => {
-        return new VolunteerBubble(v, innerWidth, innerHeight)
+    const button_2024 = document.getElementById("2024-volunteers");
+    button_2024.addEventListener("click", function(event) {
+        const volunteers = ["Hope M.", "Xen E.", "Casey H.", "Maseo B.", "Alex D.", "Greg G.", "Matt F.", "Mew", "Anna W.", "Mike G.", "Mike C.", "Erik B.", "Kelsie W.", "Austin B."];
+        volunteerBubbles = volunteers.map((v) => {
+            return new VolunteerBubble(v, innerWidth, innerHeight)
+        });
     });
+    button_2024.click();
 
     move();
      
@@ -159,7 +165,9 @@ class VolunteerBubble {
         });
 
     });
+
 })();
+
 
 /**
  * Generates a random colour based off the hue saturation lightness alpha model
