@@ -1,6 +1,6 @@
 ## The PigPit website
 
-This repo contains the pig pit website. It is currently hosted on netlify.
+This repo contains the pig pit website. It is currently hosted on netlify and is deployed on each push.
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/630b644e-f01c-4cf7-9655-67b9d8d6b119/deploy-status)](https://app.netlify.com/sites/pigpit/deploys)
 
