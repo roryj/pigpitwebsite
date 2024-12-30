@@ -27,7 +27,8 @@
             width: 90%;
         }
 
-        .instagram {
+        .breadcrumb {
+            text-align: left;
             position: absolute;
             width: 40px;
             bottom: 0%;
@@ -128,37 +129,44 @@
         .breadcrumb {
             text-align: left;
             padding-top: 20px;
-	    align-items: start;
-	    display: block;
-	    
+            display: block;
+            position: absolute;
+            top: 20px;
+            left: 20px;
         }
 
         .breadcrumb a {
-            text-align: left;
-            padding-top: 20px;
             color: #ddd;
+            text-decoration: none;
+            font-size: 1.1em;
         }
 
         .breadcrumb a:hover {
             color: #89a090;
         }
 
+        .toc {
+            color: #ddd;
+            list-style-type: none;
+            margin: 30px 0;
+        }
 
-	.toc {
-		color: #ddd;
-		list-style-type: none;
-	}
-	.toc li {
-		display: inline;
-		padding-right: 20px;
-	}
-	.toc a {
-		color: #ddd;
-	}
-	.toc a:hover {
+        .toc li {
+            display: inline-block;
+            padding: 10px 20px;
+        }
+
+        .toc a {
+            color: #ddd;
+            font-size: 1.3em;
+            font-weight: bold;
+            text-decoration: none;
+            letter-spacing: 1px;
+        }
+
+        .toc a:hover {
             color: #89a090;
-	}
-
+        }
     </style>
 </head>
 <body>
