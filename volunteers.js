@@ -86,22 +86,15 @@ class VolunteerBubble {
   }
 }
 
-(async function () {
-  let volunteerBubbles = [];
-
-  const debugDiv = document.getElementById("debug-info");
-
-  let canvas = document.getElementById("volunteer-canvas");
-  console.log(`${canvas.offsetTop}, ${canvas.clientTop}`);
-
-  canvas.width = window.innerWidth;
-  canvas.height = window.innerHeight;
-
-  let l = canvas.getContext("2d");
-
-  const button_2024 = document.getElementById("2024-volunteers");
-  button_2024.addEventListener("click", function (event) {
-    const volunteers = [
+/**
+ * Gets the volunteers for the given year
+ *
+ * @param {Number} year
+ * @returns {Array} The list of volunteers
+ * */
+function getVolunteers(year) {
+  if (year == 2024) {
+    return [
       "Hope M.",
       "Xen E.",
       "Casey H.",
@@ -117,11 +110,48 @@ class VolunteerBubble {
       "Kelsie W.",
       "Austin B.",
     ];
-    volunteerBubbles = volunteers.map((v) => {
-      return new VolunteerBubble(v, innerWidth, innerHeight);
+  } else if (year == 2025) {
+    return ["Hope M.", "Xen E.", "Maseo B.", "Alex D.", "Greg G.", "Carly"];
+  } else {
+    return [];
+  }
+}
+
+(async function () {
+  let volunteerBubbles = [];
+
+  const debugDiv = document.getElementById("debug-info");
+
+  let canvas = document.getElementById("volunteer-canvas");
+  console.log(`${canvas.offsetTop}, ${canvas.clientTop}`);
+
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+
+  let l = canvas.getContext("2d");
+
+  const years = [2024, 2025];
+
+  years.forEach((year, _index) => {
+    const button = document.getElementById(`${year}-volunteers`);
+    button.addEventListener("click", function (event) {
+      // Remove the selected class from all buttons
+      const buttons = document.querySelectorAll(".year-button");
+      buttons.forEach((btn) => {
+        btn.classList.remove("selected");
+      });
+
+      button.classList.add("selected");
+      const volunteers = getVolunteers(year);
+      volunteerBubbles = volunteers.map((v) => {
+        return new VolunteerBubble(v, innerWidth, innerHeight);
+      });
     });
+
+    if (year == 2025) {
+      button.click();
+    }
   });
-  button_2024.click();
 
   move();
 

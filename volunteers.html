@@ -60,6 +60,11 @@
             cursor: pointer;
             font-size: x-large;
         }
+
+        .selected {
+            color: #89a090;
+            font-weight: bold;
+        }
     </style>
 </head>
 
@@ -79,13 +84,13 @@
                 </h3>
                 <p id="debug-info"></p>
                 <div class="years">
+                    <button id="2025-volunteers" class="year-button">2025</button>
                     <button id="2024-volunteers" class="year-button">2024</button>
                 </div>
             </div>
+            <canvas id="volunteer-canvas"></canvas>
         </div>
-        <canvas id="volunteer-canvas"></canvas>
-    </div>
-    <script type="module" src="volunteers.js"></script>
+        <script type="module" src="volunteers.js"></script>
 </body>
 
 </html>
