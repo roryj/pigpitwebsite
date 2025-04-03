@@ -3,114 +3,114 @@
         "year": "2021",
         "expenditures": [
             {
-                "name":"Tarp",
-                "cost":7.48,
-                "category":"Tools & Supplies"
+                "name": "Tarp",
+                "cost": 7.48,
+                "category": "Tools & Supplies"
             },
             {
-                "name":"Rocks for fie",
-                "cost":23.94,
-                "category":"Tools & Supplies"
+                "name": "Rocks for fie",
+                "cost": 23.94,
+                "category": "Tools & Supplies"
             },
             {
-                "name":"Bigger rocks",
-                "cost":56,
-                "category":"Tools & Supplies"
+                "name": "Bigger rocks",
+                "cost": 56,
+                "category": "Tools & Supplies"
             },
             {
-                "name":"Bricks",
-                "cost":75.60,
-                "category":"Tools & Supplies"
+                "name": "Bricks",
+                "cost": 75.60,
+                "category": "Tools & Supplies"
             },
             {
-                "name":"Banana leaves",
-                "cost":22.35,
-                "category":"Food & Drink"
+                "name": "Banana leaves",
+                "cost": 22.35,
+                "category": "Food & Drink"
             },
             {
-                "name":"Shovel",
-                "cost":20,
-                "category":"Tools & Supplies"
+                "name": "Shovel",
+                "cost": 20,
+                "category": "Tools & Supplies"
             },
             {
-                "name":"Pick axe",
-                "cost":31.98,
-                "category":"Tools & Supplies"
+                "name": "Pick axe",
+                "cost": 31.98,
+                "category": "Tools & Supplies"
             },
             {
-                "name":"Tables",
-                "cost":55,
-                "category":"Tools & Supplies"
+                "name": "Tables",
+                "cost": 55,
+                "category": "Tools & Supplies"
             },
             {
-                "name":"Burlap sacks",
-                "cost":24.26,
-                "category":"Tools & Supplies"
+                "name": "Burlap sacks",
+                "cost": 24.26,
+                "category": "Tools & Supplies"
             },
             {
-                "name":"Pig",
-                "cost":210,
-                "category":"Food & Drink"
+                "name": "Pig",
+                "cost": 210,
+                "category": "Food & Drink"
             },
             {
-                "name":"Pig head",
-                "cost":28,
-                "category":"Food & Drink"
+                "name": "Pig head",
+                "cost": 28,
+                "category": "Food & Drink"
             },
             {
-                "name":"Chicken wire",
-                "cost":20,
-                "category":"Tools & Supplies"
+                "name": "Chicken wire",
+                "cost": 20,
+                "category": "Tools & Supplies"
             },
             {
-                "name":"Firewood",
-                "cost":54,
-                "category":"Tools & Supplies"
+                "name": "Firewood",
+                "cost": 54,
+                "category": "Tools & Supplies"
             },
             {
-                "name":"Salt",
-                "cost":10,
-                "category":"Food & Drink"
+                "name": "Salt",
+                "cost": 10,
+                "category": "Food & Drink"
             },
             {
-                "name":"Utensils",
-                "cost":15,
-                "category":"Tools & Supplies"
+                "name": "Utensils",
+                "cost": 15,
+                "category": "Tools & Supplies"
             },
             {
-                "name":"Paper plates",
-                "cost":23,
-                "category":"Tools & Supplies"
+                "name": "Paper plates",
+                "cost": 23,
+                "category": "Tools & Supplies"
             },
             {
-                "name":"Solo cups",
-                "cost":13,
-                "category":"Tools & Supplies"
+                "name": "Solo cups",
+                "cost": 13,
+                "category": "Tools & Supplies"
             },
             {
-                "name":"Fire extinguisher",
-                "cost":50,
-                "category":"Tools & Supplies"
+                "name": "Fire extinguisher",
+                "cost": 50,
+                "category": "Tools & Supplies"
             },
             {
-                "name":"Work gloves",
-                "cost":10,
-                "category":"Tools & Supplies"
+                "name": "Work gloves",
+                "cost": 10,
+                "category": "Tools & Supplies"
             },
             {
-                "name":"Spindrift",
-                "cost":24,
-                "category":"Food & Drink"
+                "name": "Spindrift",
+                "cost": 24,
+                "category": "Food & Drink"
             },
             {
-                "name":"Hard seltzer",
-                "cost":50,
-                "category":"Food & Drink"
+                "name": "Hard seltzer",
+                "cost": 50,
+                "category": "Food & Drink"
             },
             {
-                "name":"Keg",
-                "cost":165,
-                "category":"Food & Drink"
+                "name": "Keg",
+                "cost": 165,
+                "category": "Food & Drink"
             }
         ]
     },
@@ -118,44 +118,44 @@
         "year": "2022",
         "expenditures": [
             {
-                "name":"Wireless meat thermometers",
-                "cost":168.52,
-                "category":"Tools & Supplies"
+                "name": "Wireless meat thermometers",
+                "cost": 168.52,
+                "category": "Tools & Supplies"
             },
             {
-                "name":"Burlap sacks",
-                "cost":55.10,
-                "category":"Tools & Supplies"
+                "name": "Burlap sacks",
+                "cost": 55.10,
+                "category": "Tools & Supplies"
             },
             {
-                "name":"Tarp",
-                "cost":37.38,
-                "category":"Tools & Supplies"
+                "name": "Tarp",
+                "cost": 37.38,
+                "category": "Tools & Supplies"
             },
             {
-                "name":"Wood",
-                "cost":42.93,
-                "category":"Tools & Supplies"
+                "name": "Wood",
+                "cost": 42.93,
+                "category": "Tools & Supplies"
             },
             {
-                "name":"Yard waste bags",
-                "cost":10,
-                "category":"Tools & Supplies"
+                "name": "Yard waste bags",
+                "cost": 10,
+                "category": "Tools & Supplies"
             },
             {
-                "name":"Ice",
-                "cost":32.96,
-                "category":"Food & Drink"
+                "name": "Ice",
+                "cost": 32.96,
+                "category": "Food & Drink"
             },
             {
-                "name":"Pig",
-                "cost":275.00,
-                "category":"Food & Drink"
+                "name": "Pig",
+                "cost": 275.00,
+                "category": "Food & Drink"
             },
             {
-                "name":"Cooler",
-                "cost":109,
-                "category":"Tools & Supplies"
+                "name": "Cooler",
+                "cost": 109,
+                "category": "Tools & Supplies"
             },
             {
                 "name": "Donations",
@@ -168,84 +168,84 @@
         "year": "2023",
         "expenditures": [
             {
-                "name":"Photo printer",
-                "cost":242.52,
-                "category":"Tools & Supplies"
+                "name": "Photo printer",
+                "cost": 242.52,
+                "category": "Tools & Supplies"
             },
             {
-                "name":"Invites",
-                "cost":71.99,
-                "category":"Operations"
+                "name": "Invites",
+                "cost": 71.99,
+                "category": "Operations"
             },
             {
-                "name":"Burlap",
-                "cost":20.94,
-                "category":"Tools & Supplies"
+                "name": "Burlap",
+                "cost": 20.94,
+                "category": "Tools & Supplies"
             },
             {
-                "name":"MSG",
-                "cost":32.97,
-                "category":"Food & Drink"
+                "name": "MSG",
+                "cost": 32.97,
+                "category": "Food & Drink"
             },
             {
-                "name":"Seasoning and Foil",
-                "cost":99.28,
-                "category":"Food & Drink"
+                "name": "Seasoning and Foil",
+                "cost": 99.28,
+                "category": "Food & Drink"
             },
             {
-                "name":"Tarp",
-                "cost":14.32,
-                "category":"Tools & Supplies"
+                "name": "Tarp",
+                "cost": 14.32,
+                "category": "Tools & Supplies"
             },
             {
-                "name":"Pig",
-                "cost":240,
-                "category":"Food & Drink"
+                "name": "Pig",
+                "cost": 240,
+                "category": "Food & Drink"
             },
             {
-                "name":"Ice",
-                "cost":38.42,
-                "category":"Food & Drink"
+                "name": "Ice",
+                "cost": 38.42,
+                "category": "Food & Drink"
             },
             {
-                "name":"Bug traps",
-                "cost":71.00,
-                "category":"Tools & Supplies"
+                "name": "Bug traps",
+                "cost": 71.00,
+                "category": "Tools & Supplies"
             },
             {
-                "name":"Rubber mallet",
-                "cost":9.84,
-                "category":"Tools & Supplies"
+                "name": "Rubber mallet",
+                "cost": 9.84,
+                "category": "Tools & Supplies"
             },
             {
-                "name":"Costco run #1",
-                "cost":353.69,
-                "category":"Food & Drink"
+                "name": "Costco run #1",
+                "cost": 353.69,
+                "category": "Food & Drink"
             },
             {
-                "name":"Cleaver",
-                "cost":82.69,
-                "category":"Tools & Supplies"
+                "name": "Cleaver",
+                "cost": 82.69,
+                "category": "Tools & Supplies"
             },
             {
-                "name":"Stage",
-                "cost":348.86,
-                "category":"Tools & Supplies"
+                "name": "Stage",
+                "cost": 348.86,
+                "category": "Tools & Supplies"
             },
             {
-                "name":"Costco run #2",
-                "cost":225.43,
-                "category":"Tools & Supplies"
+                "name": "Costco run #2",
+                "cost": 225.43,
+                "category": "Tools & Supplies"
             },
             {
-                "name":"Band",
-                "cost":200,
-                "category":"Entertainment"
+                "name": "Band",
+                "cost": 200,
+                "category": "Entertainment"
             },
             {
-                "name":"Keg",
-                "cost":101,
-                "category":"Food & Drink"
+                "name": "Keg",
+                "cost": 101,
+                "category": "Food & Drink"
             },
             {
                 "name": "Donations",
@@ -258,9 +258,9 @@
         "year": "2024",
         "expenditures": [
             {
-                "name":"Invites",
-                "cost":99.99,
-                "category":"Operations"
+                "name": "Invites",
+                "cost": 99.99,
+                "category": "Operations"
             },
             {
                 "name": "Logo commission",
@@ -380,7 +380,7 @@
             {
                 "name": "Yard waste cleanup",
                 "category": "Operations",
-                "cost":  750.05
+                "cost": 750.05
             },
             {
                 "name": "Seasoning + Salt",

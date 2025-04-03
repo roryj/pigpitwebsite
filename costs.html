@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en-GB">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -17,7 +18,8 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            min-height: 100vh; /* Full height of the viewport */
+            min-height: 100vh;
+            /* Full height of the viewport */
         }
 
         .container {
@@ -26,15 +28,18 @@
             display: flex;
             flex-direction: column;
             justify-content: center;
-            width: 90%; /* Use more of the available width */
-            max-width: 1200px; /* Limit the maximum width for readability */
+            width: 90%;
+            /* Use more of the available width */
+            max-width: 1200px;
+            /* Limit the maximum width for readability */
             margin: auto;
         }
 
         .cost-title {
             color: #fccfa1;
-            font-weight: bold;   
-            font-size: 1.5em; /* Increased font size for better readability */
+            font-weight: bold;
+            font-size: 1.5em;
+            /* Increased font size for better readability */
             margin: 20px 0;
         }
 
@@ -47,7 +52,8 @@
             border-collapse: collapse;
         }
 
-        th, td {
+        th,
+        td {
             border: 1px solid #ddd;
             padding: 8px;
             text-align: left;
@@ -69,9 +75,12 @@
         }
 
         canvas {
-            width: 100% !important; /* Ensure canvas uses full width */
-            height: auto !important; /* Maintain aspect ratio */
-            margin-bottom: 20px; /* Space between canvas and table */
+            width: 100% !important;
+            /* Ensure canvas uses full width */
+            height: auto !important;
+            /* Maintain aspect ratio */
+            margin-bottom: 20px;
+            /* Space between canvas and table */
         }
 
         .summary {
@@ -103,16 +112,15 @@
         .breadcrumb a:hover {
             color: #89a090;
         }
-
     </style>
 </head>
+
 <body>
     <div class="container">
         <div>
             <div class="breadcrumb">
                 <a href="index.html">
-                    <= back to the invite
-                </a>
+                    <= back to the invite </a>
             </div>
             <div>
                 <h1>The Cost to Run Pig Pit</h1>
@@ -122,11 +130,11 @@
                     what it takes to throw this event, we have included below the per-year financial
                     breakdown of costs for running pig pit. This of course does not include the countless
                     hours of preparation and support we get.
-                    <br/>
-                    <br/>
+                    <br />
+                    <br />
                     Much love from the pig roasters in chief,
-                    <br/>
-                    <br/>
+                    <br />
+                    <br />
                     Rory & Elliot
                 </p>
             </div>
@@ -202,4 +210,5 @@
 
     <script type="module" src="costs.js"></script>
 </body>
+
 </html>
