@@ -111,7 +111,16 @@ function getVolunteers(year) {
       "Austin B.",
     ];
   } else if (year == 2025) {
-    return ["Hope M.", "Xen E.", "Maseo B.", "Alex D.", "Greg G.", "Carly"];
+    return [
+      "Hope M.",
+      "Xen E.",
+      "Maseo B.",
+      "Alex D.",
+      "Greg G.",
+      "Carly M.",
+      "Casey H.",
+      "Mike C.",
+    ];
   } else {
     return [];
   }
