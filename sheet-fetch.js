@@ -79,7 +79,7 @@ async function renderChart(mealCounts) {
         beginAtZero: true,
         ticks: {
           callback: function (value, index, ticks) {
-            return value + " meals";
+            return value + " dishes";
           },
         },
       },
