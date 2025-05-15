@@ -446,6 +446,62 @@
     },
     {
         "year": "2025",
-        "expenditures": []
+        "expenditures": [
+            {
+                "name": "Auger rental",
+                "category": "Tools & Supplies",
+                "cost": 124.10
+            },
+            {
+                "name": "Grass seeds + fertilizer",
+                "category": "Tools & Supplies",
+                "cost": 79.11
+            },
+            {
+                "name": "Sonotubes",
+                "category": "Tools & Supplies",
+                "cost": 27.76
+            },
+            {
+                "name": "Anchor bolts",
+                "category": "Tools & Supplies",
+                "cost": 6.72
+            },
+            {
+                "name": "Dust masks",
+                "category": "Tools & Supplies",
+                "cost": 8.79
+            },
+            {
+                "name": "Rebar",
+                "category": "Tools & Supplies",
+                "cost": 19.68
+            },
+            {
+                "name": "Alex design and build",
+                "category": "Operations",
+                "cost": 400
+            },
+            {
+                "name": "Ground stakes",
+                "category": "Tools & Supplies",
+                "cost": 11.04
+            },
+            {
+                "name": "Eye bolt lag screw",
+                "category": "Tools & Supplies",
+                "cost": 3.50
+            },
+            {
+                "name": "Canvas and burlap sacks",
+                "category": "Tools & Supplies",
+                "cost": 28.69
+            },
+            {
+                "name": "Wood barrel planters, pvc pipe, and concrete",
+                "category": "Tools & Supplies",
+                "cost": 314.34
+            }
+        ]
     }
 ]
