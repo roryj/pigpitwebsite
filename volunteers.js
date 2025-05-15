@@ -1,3 +1,22 @@
+const volunteerBios = {
+  "Xen E.":
+    "As Pig Pit has grown it has highlighted a need for better organization, delegation, and planning. Xen steps in as a prominent project manager providing a much needed refactoring of our entire preparation process. Bringing us into the 21st century we actually have tasks, owners, and an asana board thanks to him. Plus if you like the quality of your merch, Xen also handles the sourcing of art and goods!",
+  "Hope M.":
+    "Hope focuses on helping us more dutifully track expenses, people, projects, and last mile planning. There are always a million and one things to own and do for Pig Pit and when in doubt, Hope often is the first to pick up ownership. In addition to the behind the scenes work, look out for some new activities and decoration theming this year!",
+  "Maseo B.":
+    "Our music man, the best talent acquisitioner we could have asked for. Maseo himself plays in a band in Seattle and is fantastic at networking, finding the local music willing to play, and managing all of the connection and booking process. Day of, you can find him near the stage, shepherding the bands, keeping things on time, and if you’re lucky, MCing. ",
+  "Alex D.":
+    "As we grow the need for more and more engineering projects becomes apparent. You like the stage? Alex built it. You like the gazebo? Alex built it. You like the grill? Alex built it. A master at his craft, give him a clean sheet of requirements and you’ll get a design that’s overbuilt and under cost. If you want to give him thanks, you can find him behind one of the cameras at Pig Pit, he also moonlights as a YouTuber so check him out at https://www.youtube.com/@MethodicalMaker",
+  "Greg G.":
+    "Music doesn’t play without sound, our king roadie, without his help getting the bands is only half the battle. Greg brings a professionalism and good attitude that is irreplaceable. I can’t remember a single audio issue that has happened at any Pig Pit and I can’t imagine one happening in the future. He stays busy during the entire event, but go checkout his stack during the event if you like audio tech, just don’t distract him too much!",
+  "Mike C.":
+    "With no clearly defined role, Mike is the all rounder and jack of all trades. Every year he has helped anywhere that needed resources, he has the ability to help with engineering, set up, logistical planning, food, transportation, you name it Mike can help. The need for resourcing goes up every year and Mike has been an invaluable asset to throw at problems.",
+  "Carly M.":
+    "Carly is a new addition to the team this year. She is helping with the planning and logistics of the event. She has a great eye for detail and is helping us make sure everything runs smoothly.",
+  "Casey H.":
+    "Casey has been a long time volunteer and friend of Pig Pit. Prepping food, helping with setup, and artistic planning, her skills and vision has help make the event what it is today.",
+};
+
 /**
  * Stores the current state and details for a bubble
  */
@@ -132,7 +151,28 @@ function getVolunteers(year) {
   const debugDiv = document.getElementById("debug-info");
 
   let canvas = document.getElementById("volunteer-canvas");
+  let volunteerBlurbs = document.getElementById("volunteer-blurbs");
+
   console.log(`${canvas.offsetTop}, ${canvas.clientTop}`);
+
+  let toggle = document.getElementById("volunteer-view-toggle");
+  toggle.checked = true;
+  toggle.addEventListener("change", function (event) {
+    console.log("Toggle changed..");
+    if (this.checked) {
+      canvas.style.visibility = "visible";
+      volunteerBlurbs.style.display = "none";
+      document.body.classList.add("no-overflow");
+    } else {
+      canvas.style.visibility = "hidden";
+      drawVolunteerBlurbs(volunteerBlurbs, volunteerBubbles);
+      volunteerBlurbs.style.display = "block";
+      document.body.classList.remove("no-overflow");
+    }
+  });
+
+  // uncomment to start with the blurb view
+  // toggle.click();
 
   canvas.width = window.innerWidth;
   canvas.height = window.innerHeight;
@@ -155,6 +195,7 @@ function getVolunteers(year) {
       volunteerBubbles = volunteers.map((v) => {
         return new VolunteerBubble(v, innerWidth, innerHeight);
       });
+      drawVolunteerBlurbs(volunteerBlurbs, volunteerBubbles);
     });
 
     if (year == 2025) {
@@ -222,6 +263,31 @@ function getVolunteers(year) {
  */
 function chooseRandomColour() {
   return "hsla(" + Math.random() * 360 + ", 100%, 50%, 1)";
+}
+
+function drawVolunteerBlurbs(root, volunteers) {
+  // remove any existing volunteer-blurb elements that were created
+  const existing = root.querySelectorAll(".volunteer-blurb");
+  existing.forEach((b) => {
+    b.remove();
+  });
+  volunteers.forEach((v) => {
+    let blurb = document.createElement("div");
+    blurb.className = "volunteer-blurb";
+    root.appendChild(blurb);
+
+    let name = document.createElement("p");
+    name.className = "volunteer-name";
+    name.textContent = v.name;
+    blurb.appendChild(name);
+
+    if (volunteerBios[v.name]) {
+      let bio = document.createElement("p");
+      bio.className = "volunteer-bio";
+      bio.textContent = volunteerBios[v.name];
+      blurb.appendChild(bio);
+    }
+  });
 }
 
 /**

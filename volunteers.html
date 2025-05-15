@@ -19,6 +19,10 @@
             justify-content: center;
             align-items: center;
             min-height: 100vh;
+            overflow: auto;
+        }
+
+        .no-overflow {
             overflow: hidden;
         }
 
@@ -65,6 +69,142 @@
             color: #89a090;
             font-weight: bold;
         }
+
+        .toggle {
+            position: absolute;
+            right: 4%;
+            top: 20px;
+        }
+
+        .toggle p {
+            font-size: small;
+            font-weight: bold;
+        }
+
+        .toggle-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .toggle-container span {
+            margin: 0;
+            padding-right: 10px;
+            padding-left: 10px;
+            color: #fccfa1;
+            font-size: small;
+            font-weight: lighter;
+            /* font-size: 1.5em; */
+        }
+
+        @media (max-width: 768px) {
+            .toggle {
+                position: static;
+                /* Remove absolute positioning */
+                margin-top: 20px;
+                /* Add spacing above the toggle */
+                text-align: center;
+                /* Center the toggle */
+            }
+
+            .toggle-container {
+                justify-content: center;
+                /* Center the toggle contents */
+            }
+        }
+
+        .switch {
+            position: relative;
+            display: inline-block;
+            width: 60px;
+            height: 34px;
+        }
+
+        .switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            -webkit-transition: .4s;
+            transition: .4s;
+        }
+
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 26px;
+            width: 26px;
+            left: 4px;
+            bottom: 4px;
+            background-color: white;
+            -webkit-transition: .4s;
+            transition: .4s;
+        }
+
+        #volunteer-blurbs {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            width: 60%;
+            margin: 0 auto;
+            /* overflow-y: scroll; */
+            max-height: 80%;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .volunteer-blurb {
+            padding-top: 20px;
+            padding-bottom: 20px;
+            /* display: flex; */
+            gap: 10px;
+            justify-content: center;
+        }
+
+        .volunteer-name {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #fccfa1;
+        }
+
+        .volunteer-bio {
+            font-size: 1.2em;
+            color: #ddd;
+        }
+
+        input:checked+.slider {
+            background-color: #2196F3;
+        }
+
+        input:focus+.slider {
+            box-shadow: 0 0 1px #2196F3;
+        }
+
+        input:checked+.slider:before {
+            -webkit-transform: translateX(26px);
+            -ms-transform: translateX(26px);
+            transform: translateX(26px);
+        }
+
+        /* Rounded sliders */
+        .slider.round {
+            border-radius: 34px;
+        }
+
+        .slider.round:before {
+            border-radius: 50%;
+        }
     </style>
 </head>
 
@@ -73,7 +213,7 @@
         <div>
             <div class="breadcrumb">
                 <a href="index.html">
-                    <= back to the invite </a>
+                    &lt;= back to the invite </a>
             </div>
             <div>
                 <h1>Pig Pit Volunteers</h1>
@@ -83,10 +223,23 @@
                     Thank you for all your help!
                 </h3>
                 <p id="debug-info"></p>
+                <div class="toggle">
+                    <p>toggle volunteer layout</p>
+                    <div class="toggle-container">
+                        <span id="">blurbs</span>
+                        <label class="switch">
+                            <input id="volunteer-view-toggle" type="checkbox" checked>
+                            <span class="slider round"></span>
+                        </label>
+                        <span id="">bubbles</span>
+                    </div>
+                </div>
                 <div class="years">
                     <button id="2025-volunteers" class="year-button">2025</button>
                     <button id="2024-volunteers" class="year-button">2024</button>
                 </div>
+            </div>
+            <div id="volunteer-blurbs" style="display: none;">
             </div>
             <canvas id="volunteer-canvas"></canvas>
         </div>
