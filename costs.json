@@ -501,6 +501,61 @@
                 "name": "Wood barrel planters, pvc pipe, and concrete",
                 "category": "Tools & Supplies",
                 "cost": 314.34
+            },
+            {
+                "name": "Metal for grill",
+                "category": "Tools & Supplies",
+                "cost": 1626.05
+            },
+            {
+                "name": "100 tshirts",
+                "category": "Merch",
+                "cost": 2226
+            },
+            {
+                "name": "round bar for grill",
+                "category": "Tools & Supplies",
+                "cost": 30.25
+            },
+            {
+                "name": "stickers",
+                "category": "Merch",
+                "cost": 163.47
+            },
+            {
+                "name": "nonsteel supplier parts for grill",
+                "category": "Tools & Supplies",
+                "cost": 123.05
+            },
+            {
+                "name": "welding wire",
+                "category": "Tools & Supplies",
+                "cost": 63.96
+            },
+            {
+                "name": "various grill parts",
+                "category": "Tools & Supplies",
+                "cost": 167.64
+            },
+            {
+                "name": "decking screws + framing 2x4",
+                "category": "Tools & Supplies",
+                "cost": 23.02
+            },
+            {
+                "name": "10' 2x4s bolts/hardware, shelf rack, storage totes",
+                "category": "Tools & Supplies",
+                "cost": 326.37
+            },
+            {
+                "name": "rental truck + gas",
+                "category": "Tools & Supplies",
+                "cost": 24.47
+            },
+            {
+                "name": "last bit of the grill mechatronics",
+                "category": "Tools & Supplies",
+                "cost": 43.02
             }
         ]
     }
