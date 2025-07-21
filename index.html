@@ -185,9 +185,7 @@
         #drawer-content {
             position: fixed;
             top: 60px;
-            /* Lower the drawer */
             right: -360px;
-            /* Move further right so no text is visible when closed */
             width: 320px;
             max-width: 90vw;
             height: auto;
@@ -201,15 +199,139 @@
             flex-direction: column;
             gap: 10px;
             overflow-y: auto;
-            pointer-events: auto;
-            border-top-left-radius: 12px;
-            border-bottom-left-radius: 12px;
-            border-left: 6px solid;
-            border-image: linear-gradient(to bottom, #fccfa1, #ffb347, #e6a07e, #fccfa1 90%) 1;
+            border-top-left-radius: 24px;
+            border-bottom-left-radius: 24px;
+            z-index: 2001;
         }
 
         #drawer-content.open {
             right: 0;
+        }
+
+        @media (max-width: 600px) {
+            #drawer-content {
+                top: 0;
+                right: -100vw;
+                width: 100vw;
+                max-width: 100vw;
+                height: 100vh;
+                max-height: 100vh;
+                border-radius: 0;
+                padding: 18px 8px 8px 8px;
+            }
+
+            #drawer-content.open {
+                right: 0;
+            }
+        }
+
+        /* Responsive schedule button */
+        .rainbow-border {
+            display: inline-block;
+            padding: 3px;
+            border-radius: 14px 6px 6px 14px;
+            background: conic-gradient(red, orange, yellow, lime, cyan, blue, violet, red);
+            background-size: 200% 200%;
+            animation: rainbow-move 2s linear infinite;
+        }
+
+        @keyframes rainbow-move {
+            100% {
+                background-position: 200% 0;
+            }
+        }
+
+        #open-schedule {
+            position: relative;
+            z-index: 2002;
+            background: #fccfa1;
+            color: #222;
+            border: none;
+            border-radius: 8px 0 0 8px;
+            padding: 12px 18px;
+            font-size: 1.2em;
+            cursor: pointer;
+            box-shadow: -2px 2px 8px rgba(0, 0, 0, 0.2);
+            transition: background 0.2s;
+            overflow: visible;
+            display: block;
+        }
+
+        .rainbow-border.hidden {
+            display: none;
+        }
+
+        @media (max-width: 600px) {
+            .rainbow-border {
+                border-radius: 12px;
+                padding: 2px;
+            }
+
+            #open-schedule {
+                border-radius: 8px;
+                padding: 10px 14px;
+                font-size: 1em;
+            }
+        }
+
+        @media (max-width: 600px) {
+            #schedule-drawer {
+                position: fixed;
+                top: 0;
+                left: 0;
+                right: 0;
+                width: 100vw;
+                z-index: 3000;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                pointer-events: none;
+                /* Only allow pointer events on children */
+            }
+
+            .rainbow-border {
+                margin: 10px auto 0 auto;
+                border-radius: 16px;
+                padding: 2px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: max-content;
+                pointer-events: auto;
+            }
+
+            #open-schedule {
+                border-radius: 12px;
+                padding: 12px 24px;
+                font-size: 1.2em;
+                margin: 0 auto;
+                display: block;
+                position: static;
+                width: auto;
+                box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+            }
+
+            #drawer-content {
+                position: fixed;
+                top: -100vh;
+                left: 0;
+                right: 0;
+                width: 100vw;
+                height: auto;
+                max-height: 90vh;
+                border-radius: 0 0 24px 24px;
+                box-shadow: 0 8px 32px 0 #fccfa1;
+                padding: 32px 12px 24px 12px;
+                transition: top 0.35s cubic-bezier(.4, 2, .6, 1);
+                z-index: 3001;
+                margin: 0 auto;
+                background: #222;
+                pointer-events: auto;
+            }
+
+            #drawer-content.open {
+                top: 0;
+            }
         }
 
         #close-schedule {
