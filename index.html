@@ -137,9 +137,159 @@
         .prev-pigpits a {
             font-size: medium;
         }
+
+        #schedule-drawer {
+            position: fixed;
+            top: 60px;
+            /* Lower the drawer */
+            right: 0;
+            z-index: 2000;
+        }
+
+        #open-schedule {
+            position: relative;
+            z-index: 1;
+            background: #fccfa1;
+            color: #222;
+            border: none;
+            border-radius: 8px 0 0 8px;
+            padding: 12px 18px;
+            font-size: 1.2em;
+            cursor: pointer;
+            box-shadow: -2px 2px 8px rgba(0, 0, 0, 0.2);
+            transition: background 0.2s;
+            overflow: visible;
+            display: block;
+        }
+
+        .rainbow-border {
+            display: inline-block;
+            padding: 3px;
+            /* thickness of the border */
+            border-radius: 14px 6px 6px 14px;
+            background: conic-gradient(red, orange, yellow, lime, cyan, blue, violet, red);
+            background-size: 200% 200%;
+            animation: rainbow-move 2s linear infinite;
+        }
+
+        @keyframes rainbow-move {
+            100% {
+                background-position: 200% 0;
+            }
+        }
+
+        #open-schedule:hover {
+            background: #ffe3c2;
+        }
+
+        #drawer-content {
+            position: fixed;
+            top: 60px;
+            /* Lower the drawer */
+            right: -360px;
+            /* Move further right so no text is visible when closed */
+            width: 320px;
+            max-width: 90vw;
+            height: auto;
+            max-height: 80vh;
+            background: #222;
+            color: #fccfa1;
+            box-shadow: -20px 0 40px 0 #fccfa1;
+            padding: 32px 24px 24px 24px;
+            transition: right 0.3s cubic-bezier(.4, 2, .6, 1);
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            overflow-y: auto;
+            pointer-events: auto;
+            border-top-left-radius: 12px;
+            border-bottom-left-radius: 12px;
+            border-left: 6px solid;
+            border-image: linear-gradient(to bottom, #fccfa1, #ffb347, #e6a07e, #fccfa1 90%) 1;
+        }
+
+        #drawer-content.open {
+            right: 0;
+        }
+
+        #close-schedule {
+            position: absolute;
+            top: 18px;
+            right: 18px;
+            background: none;
+            border: none;
+            color: #fccfa1;
+            font-size: 2em;
+            cursor: pointer;
+        }
+
+        #drawer-content h2 {
+            margin-top: 0;
+            margin-bottom: 18px;
+            font-size: 1.5em;
+            color: #fccfa1;
+            text-align: left;
+        }
+
+        #drawer-content ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        #drawer-content li {
+            margin-bottom: 14px;
+            font-size: 1.1em;
+            color: #fff;
+        }
+
+        @media (max-width: 500px) {
+
+            #drawer-content,
+            #open-schedule {
+                width: 90vw;
+                font-size: 1em;
+            }
+
+            #drawer-content {
+                padding: 18px 8px 8px 8px;
+            }
+        }
+
+        .schedule-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .schedule-list li {
+            display: flex;
+            flex-direction: row;
+            align-items: baseline;
+            margin-bottom: 14px;
+            font-size: 1.1em;
+            color: #fff;
+            gap: 16px;
+        }
+
+        .sched-time {
+            min-width: 70px;
+            font-weight: bold;
+            color: #fccfa1;
+            text-align: right;
+            flex-shrink: 0;
+        }
+
+        .sched-artist {
+            color: #fff;
+            font-weight: normal;
+            text-align: left;
+            flex: 1;
+        }
     </style>
     <script type="module" src="https://cdn.jsdelivr.net/npm/chart.js@4.4.3/dist/chart.umd.min.js"></script>
     <script src="./sheet-fetch.js"></script>
+    <script src="./drawer.js"></script>
 </head>
 
 <body>
@@ -174,6 +324,25 @@
         <p class="copyright">
             Brought to you by Pig Pit Oinc.
         </p>
+    </div>
+    <div id="schedule-drawer">
+        <div class="rainbow-border">
+            <button id="open-schedule" aria-label="Open schedule">&#9776; Schedule</button>
+        </div>
+        <div id="drawer-content">
+            <button id="close-schedule" aria-label="Close schedule">&times;</button>
+            <h2>Pig Pit Schedule</h2>
+            <ul class="schedule-list">
+                <li><span class="sched-time">12pm:</span><span class="sched-artist">JV</span></li>
+                <li><span class="sched-time">2pm:</span><span class="sched-artist">BUPP! & Pig Pull</span></li>
+                <li><span class="sched-time">4pm:</span><span class="sched-artist">Mr. Vale's Math Class & Yoga</span>
+                </li>
+                <li><span class="sched-time">5:30pm:</span><span class="sched-artist">DJ JT</span></li>
+                <li><span class="sched-time">7:30pm:</span><span class="sched-artist">Balcony Bridge & Grill Pull</span>
+                </li>
+                <li><span class="sched-time">9pm:</span><span class="sched-artist">DJ JCKLOT</span></li>
+            </ul>
+        </div>
     </div>
 </body>
 
