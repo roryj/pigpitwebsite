@@ -556,6 +556,81 @@
                 "name": "last bit of the grill mechatronics",
                 "category": "Tools & Supplies",
                 "cost": 43.02
+            },
+            {
+                "name": "rocks for pit",
+                "category": "Tools & Supplies",
+                "cost": 41.51
+            },
+            {
+                "name": "flyer design",
+                "category": "Decorations",
+                "cost": 125
+            },
+            {
+                "name": "Grill labor",
+                "category": "Services",
+                "cost": 2000
+            },
+            {
+                "name": "Lamp housings",
+                "category": "Tools & Supplies",
+                "cost": 85.65
+            },
+            {
+                "name": "Umbrellas",
+                "category": "Decorations",
+                "cost": 113.65
+            },
+            {
+                "name": "Sun sails",
+                "category": "Decorations",
+                "cost": 132.41
+            },
+            {
+                "name": "Hand towels",
+                "category": "Tools & Supplies",
+                "cost": 37.51
+            },
+            {
+                "name": "Chafing stands",
+                "category": "Food & Drink",
+                "cost": 69.99
+            },
+            {
+                "name": "Aluminum foil pans, burners",
+                "category": "Food & Drink",
+                "cost": 80.26
+            },
+            {
+                "name": "Bug traps, coals, staples, hooks",
+                "category": "Tools & Supplies",
+                "cost": 253.61
+            },
+            {
+                "name": "Compressor, skewers",
+                "category": "Tools & Supplies",
+                "cost": 85.76
+            },
+            {
+                "name": "Banana leaves",
+                "category": "Tools & Supplies",
+                "cost": 7
+            },
+            {
+                "name": "Costco run: seasonings, waters, test bbq supplies, foil, gloves, plates, forks, TP + PT",
+                "category": "Food & Drink",
+                "cost": 417.87
+            },
+            {
+                "name": "Costco run: table, lights",
+                "category": "Decorations",
+                "cost": 130
+            },
+            {
+                "name": "Sponsorships",
+                "category": "Operations",
+                "cost": -1500
             }
         ]
     }
