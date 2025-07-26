@@ -458,39 +458,14 @@
                 "cost": 79.11
             },
             {
-                "name": "Sonotubes",
-                "category": "Tools & Supplies",
-                "cost": 27.76
-            },
-            {
-                "name": "Anchor bolts",
-                "category": "Tools & Supplies",
-                "cost": 6.72
-            },
-            {
-                "name": "Dust masks",
-                "category": "Tools & Supplies",
-                "cost": 8.79
-            },
-            {
-                "name": "Rebar",
-                "category": "Tools & Supplies",
-                "cost": 19.68
-            },
-            {
-                "name": "Alex design and build",
+                "name": "Pergola design and build",
                 "category": "Operations",
                 "cost": 400
             },
             {
-                "name": "Ground stakes",
+                "name": "Pergola parts",
                 "category": "Tools & Supplies",
-                "cost": 11.04
-            },
-            {
-                "name": "Eye bolt lag screw",
-                "category": "Tools & Supplies",
-                "cost": 3.50
+                "cost": 252.74
             },
             {
                 "name": "Canvas and burlap sacks",
@@ -498,14 +473,14 @@
                 "cost": 28.69
             },
             {
-                "name": "Wood barrel planters, pvc pipe, and concrete",
+                "name": "Grill parts",
                 "category": "Tools & Supplies",
-                "cost": 314.34
+                "cost": 2375.82
             },
             {
-                "name": "Metal for grill",
-                "category": "Tools & Supplies",
-                "cost": 1626.05
+                "name": "Grill labor",
+                "category": "Operations",
+                "cost": 2000
             },
             {
                 "name": "100 tshirts",
@@ -513,34 +488,14 @@
                 "cost": 2226
             },
             {
-                "name": "round bar for grill",
-                "category": "Tools & Supplies",
-                "cost": 30.25
-            },
-            {
                 "name": "stickers",
                 "category": "Merch",
                 "cost": 163.47
             },
             {
-                "name": "nonsteel supplier parts for grill",
-                "category": "Tools & Supplies",
-                "cost": 123.05
-            },
-            {
-                "name": "welding wire",
-                "category": "Tools & Supplies",
-                "cost": 63.96
-            },
-            {
-                "name": "various grill parts",
-                "category": "Tools & Supplies",
-                "cost": 167.64
-            },
-            {
-                "name": "decking screws + framing 2x4",
-                "category": "Tools & Supplies",
-                "cost": 23.02
+                "name": "Koozies",
+                "category": "Merch",
+                "cost": 400.00
             },
             {
                 "name": "10' 2x4s bolts/hardware, shelf rack, storage totes",
@@ -553,11 +508,6 @@
                 "cost": 24.47
             },
             {
-                "name": "last bit of the grill mechatronics",
-                "category": "Tools & Supplies",
-                "cost": 43.02
-            },
-            {
                 "name": "rocks for pit",
                 "category": "Tools & Supplies",
                 "cost": 41.51
@@ -566,11 +516,6 @@
                 "name": "flyer design",
                 "category": "Decorations",
                 "cost": 125
-            },
-            {
-                "name": "Grill labor",
-                "category": "Services",
-                "cost": 2000
             },
             {
                 "name": "Lamp housings",
@@ -585,7 +530,7 @@
             {
                 "name": "Sun sails",
                 "category": "Decorations",
-                "cost": 132.41
+                "cost": 873.61
             },
             {
                 "name": "Hand towels",
@@ -639,9 +584,9 @@
                 "cost": 200.00
             },
             {
-                "name": "security",
+                "name": "Security",
                 "type": "Services",
-                "category": "Operational",
+                "category": "Operations",
                 "cost": 600.00
             },
             {
@@ -669,129 +614,21 @@
                 "cost": 17.64
             },
             {
-                "name": "Metal for grill",
-                "type": "Consumable",
-                "category": "Tools & Supplies",
-                "cost": 829.30
-            },
-            {
-                "name": "metalsupermarket (metal for the grill)",
-                "type": "Consumable",
-                "category": "Tools & Supplies",
-                "cost": 797.05
-            },
-            {
-                "name": "round bar for grill",
-                "type": "Consumable",
-                "category": "Tools & Supplies",
-                "cost": 30.25
-            },
-            {
-                "name": "nonsteel supplier parts for grill",
-                "type": "Consumable",
-                "category": "Tools & Supplies",
-                "cost": 123.05
-            },
-            {
-                "name": "welding wire",
-                "type": "Consumable",
-                "category": "Tools & Supplies",
-                "cost": 63.96
-            },
-            {
-                "name": "various grill parts",
-                "type": "Consumable",
-                "category": "Tools & Supplies",
-                "cost": 187.64
-            },
-            {
-                "name": "last bit of the grill mechatronics",
-                "type": "Consumable",
-                "category": "Tools & Supplies",
-                "cost": 43.02
-            },
-            {
-                "name": "Grill labor",
-                "type": "Services",
-                "category": "Tools & Supplies",
-                "cost": 2000.00
-            },
-            {
-                "name": "weld wire & wire cup",
-                "type": "Consumable",
-                "category": "Tools & Supplies",
-                "cost": 37.19
-            },
-            {
-                "name": "wire ferrules / quick links / rebar (for handle) / washers, nuts, and allthread for handle pivot",
-                "type": "Consumable",
-                "category": "Tools & Supplies",
-                "cost": 38.94
-            },
-            {
-                "name": "more quick links (and stainless this time so they don't do toxic things",
-                "type": "Consumable",
-                "category": "Tools & Supplies",
-                "cost": 31.98
-            },
-            {
-                "name": "carbide burr bits for cleaning weld spatter",
-                "type": "Consumable",
-                "category": "Tools & Supplies",
-                "cost": 6.61
-            },
-            {
-                "name": "wire wheel Dremel bits for cleaning flux from corners",
-                "type": "Reusable",
-                "category": "Tools & Supplies",
-                "cost": 15.00
-            },
-            {
-                "name": "weld wire / 200lbs sand / plastic tub / bricks",
-                "type": "Consumable",
-                "category": "Tools & Supplies",
-                "cost": 105.08
-            },
-            {
-                "name": "new shaft collars for centering wheel",
-                "type": "Consumable",
-                "category": "Tools & Supplies",
-                "cost": 7.71
-            },
-            {
-                "name": "M12 nuts for welding on threads for locking pins",
-                "type": "Consumable",
-                "category": "Tools & Supplies",
-                "cost": 9.04
-            },
-            {
-                "name": "weld wire & nut and bolt",
-                "type": "Consumable",
-                "category": "Tools & Supplies",
-                "cost": 35.00
-            },
-            {
-                "name": "wire wheel / grinding disk",
-                "type": "Reusable",
-                "category": "Tools & Supplies",
-                "cost": 15.00
-            },
-            {
                 "name": "Chef store run for food stuffs",
                 "type": "Consumable",
                 "category": "Food & Drink",
                 "cost": 18.96
             },
             {
-                "name": "wristbands & name tags",
+                "name": "Wristbands & name tags",
                 "type": "Consumable",
                 "category": "Tools & Supplies",
                 "cost": 19.60
             },
             {
-                "name": "uhaul",
+                "name": "Uhaul",
                 "type": "Consumable",
-                "category": "Operational",
+                "category": "Operations",
                 "cost": 63.79
             },
             {
@@ -813,10 +650,22 @@
                 "cost": 24.00
             },
             {
-                "name": "bands",
+                "name": "Bands",
                 "type": "Services",
                 "category": "Entertainment",
                 "cost": 1300.00
+            },
+            {
+                "name": "Brisket",
+                "type": "Consumable",
+                "category": "Food & Drink",
+                "cost": 137.00
+            },
+            {
+                "name": "Sausages",
+                "type": "Consumable",
+                "category": "Food & Drink",
+                "cost": 136.57
             }
         ]
     }
