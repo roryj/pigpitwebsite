@@ -504,7 +504,7 @@
             },
             {
                 "name": "rental truck + gas",
-                "category": "Tools & Supplies",
+                "category": "Operations",
                 "cost": 24.47
             },
             {
@@ -519,7 +519,7 @@
             },
             {
                 "name": "Lamp housings",
-                "category": "Tools & Supplies",
+                "category": "Entertainment",
                 "cost": 85.65
             },
             {
@@ -534,7 +534,7 @@
             },
             {
                 "name": "Hand towels",
-                "category": "Tools & Supplies",
+                "category": "Operations",
                 "cost": 37.51
             },
             {
@@ -559,7 +559,7 @@
             },
             {
                 "name": "Banana leaves",
-                "category": "Tools & Supplies",
+                "category": "Food & Drink",
                 "cost": 7
             },
             {
@@ -580,7 +580,7 @@
             {
                 "name": "Rental: 4 stage monitors, 1 subwoofer, and 2 SM58 mics",
                 "type": "Services",
-                "category": "Tools & Supplies",
+                "category": "Entertainment",
                 "cost": 200.00
             },
             {
@@ -610,7 +610,7 @@
             {
                 "name": "Netting",
                 "type": "Reusable",
-                "category": "Tools & Supplies",
+                "category": "Decorations",
                 "cost": 17.64
             },
             {
@@ -646,7 +646,7 @@
             {
                 "name": "Ice",
                 "type": "Consumable",
-                "category": "Tools & Supplies",
+                "category": "Food & Drink",
                 "cost": 24.00
             },
             {
@@ -666,6 +666,16 @@
                 "type": "Consumable",
                 "category": "Food & Drink",
                 "cost": 136.57
+            },
+            {
+                "name": "Pig",
+                "category": "Food & Drink",
+                "cost": 260
+            },
+            {
+                "name": "Logo commission",
+                "category": "Merch",
+                "cost": 150
             }
         ]
     }
