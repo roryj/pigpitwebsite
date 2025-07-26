@@ -811,6 +811,12 @@
                 "type": "Consumable",
                 "category": "Tools & Supplies",
                 "cost": 24.00
+            },
+            {
+                "name": "bands",
+                "type": "Services",
+                "category": "Entertainment",
+                "cost": 1300.00
             }
         ]
     }
