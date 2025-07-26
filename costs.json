@@ -631,6 +631,186 @@
                 "name": "Sponsorships",
                 "category": "Operations",
                 "cost": -1500
+            },
+            {
+                "name": "Rental: 4 stage monitors, 1 subwoofer, and 2 SM58 mics",
+                "type": "Services",
+                "category": "Tools & Supplies",
+                "cost": 200.00
+            },
+            {
+                "name": "security",
+                "type": "Services",
+                "category": "Operational",
+                "cost": 600.00
+            },
+            {
+                "name": "Keg",
+                "type": "Consumable",
+                "category": "Food & Drink",
+                "cost": 75.00
+            },
+            {
+                "name": "Fairy lights",
+                "type": "Reusable",
+                "category": "Decorations",
+                "cost": 11.02
+            },
+            {
+                "name": "Shade Mounting hardware",
+                "type": "Consumable",
+                "category": "Tools & Supplies",
+                "cost": 17.64
+            },
+            {
+                "name": "Netting",
+                "type": "Reusable",
+                "category": "Tools & Supplies",
+                "cost": 17.64
+            },
+            {
+                "name": "Metal for grill",
+                "type": "Consumable",
+                "category": "Tools & Supplies",
+                "cost": 829.30
+            },
+            {
+                "name": "metalsupermarket (metal for the grill)",
+                "type": "Consumable",
+                "category": "Tools & Supplies",
+                "cost": 797.05
+            },
+            {
+                "name": "round bar for grill",
+                "type": "Consumable",
+                "category": "Tools & Supplies",
+                "cost": 30.25
+            },
+            {
+                "name": "nonsteel supplier parts for grill",
+                "type": "Consumable",
+                "category": "Tools & Supplies",
+                "cost": 123.05
+            },
+            {
+                "name": "welding wire",
+                "type": "Consumable",
+                "category": "Tools & Supplies",
+                "cost": 63.96
+            },
+            {
+                "name": "various grill parts",
+                "type": "Consumable",
+                "category": "Tools & Supplies",
+                "cost": 187.64
+            },
+            {
+                "name": "last bit of the grill mechatronics",
+                "type": "Consumable",
+                "category": "Tools & Supplies",
+                "cost": 43.02
+            },
+            {
+                "name": "Grill labor",
+                "type": "Services",
+                "category": "Tools & Supplies",
+                "cost": 2000.00
+            },
+            {
+                "name": "weld wire & wire cup",
+                "type": "Consumable",
+                "category": "Tools & Supplies",
+                "cost": 37.19
+            },
+            {
+                "name": "wire ferrules / quick links / rebar (for handle) / washers, nuts, and allthread for handle pivot",
+                "type": "Consumable",
+                "category": "Tools & Supplies",
+                "cost": 38.94
+            },
+            {
+                "name": "more quick links (and stainless this time so they don't do toxic things",
+                "type": "Consumable",
+                "category": "Tools & Supplies",
+                "cost": 31.98
+            },
+            {
+                "name": "carbide burr bits for cleaning weld spatter",
+                "type": "Consumable",
+                "category": "Tools & Supplies",
+                "cost": 6.61
+            },
+            {
+                "name": "wire wheel Dremel bits for cleaning flux from corners",
+                "type": "Reusable",
+                "category": "Tools & Supplies",
+                "cost": 15.00
+            },
+            {
+                "name": "weld wire / 200lbs sand / plastic tub / bricks",
+                "type": "Consumable",
+                "category": "Tools & Supplies",
+                "cost": 105.08
+            },
+            {
+                "name": "new shaft collars for centering wheel",
+                "type": "Consumable",
+                "category": "Tools & Supplies",
+                "cost": 7.71
+            },
+            {
+                "name": "M12 nuts for welding on threads for locking pins",
+                "type": "Consumable",
+                "category": "Tools & Supplies",
+                "cost": 9.04
+            },
+            {
+                "name": "weld wire & nut and bolt",
+                "type": "Consumable",
+                "category": "Tools & Supplies",
+                "cost": 35.00
+            },
+            {
+                "name": "wire wheel / grinding disk",
+                "type": "Reusable",
+                "category": "Tools & Supplies",
+                "cost": 15.00
+            },
+            {
+                "name": "Chef store run for food stuffs",
+                "type": "Consumable",
+                "category": "Food & Drink",
+                "cost": 18.96
+            },
+            {
+                "name": "wristbands & name tags",
+                "type": "Consumable",
+                "category": "Tools & Supplies",
+                "cost": 19.60
+            },
+            {
+                "name": "uhaul",
+                "type": "Consumable",
+                "category": "Operational",
+                "cost": 63.79
+            },
+            {
+                "name": "Plywood, 2x4s, garbage cans, chicken wire, fly traps, j hooks, caulk, primer, brushes",
+                "type": "Consumable",
+                "category": "Tools & Supplies",
+                "cost": 330.59
+            },
+            {
+                "name": "Costco run for veg meat",
+                "type": "Consumable",
+                "category": "Food & Drink",
+                "cost": 90.07
+            },
+            {
+                "name": "Ice",
+                "type": "Consumable",
+                "category": "Tools & Supplies",
+                "cost": 24.00
             }
         ]
     }
