@@ -575,7 +575,7 @@
             {
                 "name": "Sponsorships",
                 "category": "Operations",
-                "cost": -1500
+                "cost": -1700
             },
             {
                 "name": "Rental: 4 stage monitors, 1 subwoofer, and 2 SM58 mics",
@@ -653,7 +653,7 @@
                 "name": "Bands",
                 "type": "Services",
                 "category": "Entertainment",
-                "cost": 1300.00
+                "cost": 1350.00
             },
             {
                 "name": "Brisket",
@@ -676,6 +676,34 @@
                 "name": "Logo commission",
                 "category": "Merch",
                 "cost": 150
+            },
+            {
+                "name": "Balloons",
+                "type": "Consumable",
+                "category": "Decorations",
+                "cost": 49.70
+            },
+            {
+                "name": "Ice",
+                "type": "Consumable",
+                "category": "Food & Drink",
+                "cost": 36.00
+            },
+            {
+                "name": "Printing",
+                "type": "Services",
+                "category": "Decorations",
+                "cost": 4.41
+            },
+            {
+                "name": "Pre-event donations",
+                "category": "Operations",
+                "cost": -1427.99
+            },
+            {
+                "name": "Event donations + sales",
+                "category": "Operations",
+                "cost": -2843.08
             }
         ]
     }
