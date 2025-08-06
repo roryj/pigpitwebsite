@@ -139,6 +139,18 @@ function getVolunteers(year) {
       "Carly M.",
       "Casey H.",
       "Mike C.",
+      "Erin",
+      "Kelly",
+      "Justin",
+      "Jack",
+      "Beena",
+      "Josh",
+      "Tessa",
+      "Laura Lee",
+      "Gabby",
+      "Carly",
+      "Erik",
+      "Stefan",
     ];
   } else {
     return [];
