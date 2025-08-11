@@ -704,6 +704,12 @@
                 "name": "Event donations + sales",
                 "category": "Operations",
                 "cost": -2843.08
+            },
+            {
+                "name": "Food for volunteers",
+                "type": "Consumable",
+                "category": "Operations",
+                "cost": 156.50
             }
         ]
     }
