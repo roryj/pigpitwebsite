@@ -152,6 +152,29 @@ function getVolunteers(year) {
       "Erik",
       "Stefan",
     ];
+  } else if (year == 2026) {
+    return [
+      "Hope M.",
+      "Xen E.",
+      "Maseo B.",
+      "Alex D.",
+      "Greg G.",
+      "Carly M.",
+      "Casey H.",
+      "Mike C.",
+      "Erin",
+      "Kelly",
+      "Justin",
+      "Jack",
+      "Beena",
+      "Josh",
+      "Tessa",
+      "Laura Lee",
+      "Gabby",
+      "Carly",
+      "Erik",
+      "Stefan",
+    ];
   } else {
     return [];
   }
@@ -191,7 +214,7 @@ function getVolunteers(year) {
 
   let l = canvas.getContext("2d");
 
-  const years = [2024, 2025];
+  const years = [2024, 2025, 2026];
 
   years.forEach((year, _index) => {
     const button = document.getElementById(`${year}-volunteers`);
@@ -210,7 +233,7 @@ function getVolunteers(year) {
       drawVolunteerBlurbs(volunteerBlurbs, volunteerBubbles);
     });
 
-    if (year == 2025) {
+    if (year == 2026) {
       button.click();
     }
   });

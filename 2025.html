@@ -408,6 +408,146 @@
             text-align: left;
             flex: 1;
         }
+
+        .breadcrumb {
+            text-align: left;
+            padding-top: 20px;
+            display: block;
+            position: relative;
+        }
+
+        .breadcrumb a {
+            color: #ddd;
+            text-decoration: none;
+            font-size: 1.1em;
+        }
+
+        .breadcrumb a:hover {
+            color: #89a090;
+        }
+
+        .thankyou {
+            text-align: left;
+        }
+
+        .thankyou a {
+            color: #fccfa1;
+            font-weight: bolder;
+            font-size: 1em;
+            letter-spacing: 1px;
+        }
+
+        .thank-you-image {
+            width: 50%;
+        }
+
+        .band-list {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 2em 0;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 12px 24px;
+            text-align: left;
+        }
+
+        .band-list li {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 1.1em;
+            margin-bottom: 0;
+        }
+
+        .band-name {
+            font-weight: bold;
+            color: #fccfa1;
+            text-align: left;
+            min-width: 0;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .icon-link img {
+            width: 24px;
+            height: 24px;
+            vertical-align: middle;
+            margin-left: 4px;
+            transition: filter 0.2s;
+        }
+
+        .icon-link img:hover {
+            filter: brightness(1.5) drop-shadow(0 0 4px #fccfa1);
+        }
+
+        @media (max-width: 800px) {
+            .band-list {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 500px) {
+            .band-list {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .band-list-border {
+            padding: 12px;
+            border-radius: 24px;
+            background:
+                conic-gradient(from 0deg,
+                    #ff0000,
+                    #ff9900,
+                    #ffee00,
+                    #33ff00,
+                    #00ffee,
+                    #0066ff,
+                    #cc00ff,
+                    #ff0000);
+            box-shadow: 0 0 24px 8px rgba(252, 207, 161, 0.25), 0 0 32px 4px #fccfa1;
+            animation: shimmer 3s linear infinite;
+            margin: 24px 0;
+        }
+
+        @keyframes shimmer {
+            100% {
+                filter: hue-rotate(360deg);
+            }
+        }
+
+        .band-list {
+            background: #222;
+            border-radius: 16px;
+            padding: 16px;
+        }
+
+        .toc {
+            color: #ddd;
+            list-style-type: none;
+            margin: 30px 0;
+            padding: 0;
+        }
+
+        .toc li {
+            display: inline-block;
+            padding: 10px 20px;
+        }
+
+        .toc a {
+            color: #ddd;
+            font-size: 1.3em;
+            font-weight: bold;
+            text-decoration: none;
+            letter-spacing: 1px;
+            transition: all 500ms;
+        }
+
+        .toc a:hover {
+            color: #89a090;
+            font-size: 3em;
+        }
     </style>
     <script type="module" src="https://cdn.jsdelivr.net/npm/chart.js@4.4.3/dist/chart.umd.min.js"></script>
     <script src="./sheet-fetch.js"></script>
@@ -416,17 +556,131 @@
 
 <body>
     <div class="container">
+        <div class="breadcrumb">
+            <a href="index.html">&lt;= back to home</a>
+        </div>
+        <ul class="toc">
+            <li><a href="#flyer">Flyer</a></li>
+            <li><a href="#thankyou">Thank You!</a></li>
+            <li><a href="#links">Links</a></li>
+        </ul>
+        <h1 id="flyer">Flyer</h1>
         <p class="aligncenter">
             <img class="logo" src="resources/2025/pigpitflyer.jpg" alt="Pig Pit 2025 Flyer" />
-        <p class="textcenter first-text">
-            <a href="https://partiful.com/e/FGdm4aleFjPNykgAk5qr"><u>The Invite</u></a> -
-            <a
-                href="https://docs.google.com/spreadsheets/d/1gDBTGcBYYvILIlibAdE644tW91NtpIKnV2Ukdhn4BHI/edit?gid=0#gid=0"><u>Add
-                    your food</u></a>
         </p>
-        <div>
-            <canvas id="meal-counts"></canvas>
+
+        <h1 id="thankyou">Thank You</h1>
+        <p class="thankyou">
+            Another year another pit! Thank y'all so much for making this the best year yet! Without y'all, this event
+            wouldn't be the
+            incredible experience it is today, so thank you for taking part in this crazy adventure. It is a lot of work
+            putting on this
+            event, and seeing everyone together, eating good food, listening to good music, bringing the community
+            spirit together, makes
+            it all worth it.
+
+            <br />
+            <br />
+
+            First and foremost, this year could not have gone on at this scale and scope without our volunteers. A
+            special shoutout to Hope,
+            Xen, Mike C, Alex, Greg, and Maseo who have been working hard for months to put this together, bringing
+            everything
+            together on time and
+            solving a million problems along the way. To everyone who helped to make this day a success, thank you for
+            your
+            hard work in making it all come together. For a full list of volunteers, click <a
+                href="http://pigpit.family/volunteers.html">here</a>. If you want to
+            help out next year we would love to have you. Inquire by email to <a
+                href="mailto:volunteer@roryj.ca">volunteer@roryj.ca</a>.
+
+            <br />
+            <br />
+
+            Next, the incredible bands that took part this year. To all of you, thank you for taking a chance and
+            playing, you brought incredible
+            energy and excitment to Pig Pit this year, and really made it a standout year. Please follow these artists,
+            as they are incredible
+            talents and deserve your follows!
+        </p>
+
+        <div class="band-list-border">
+            <ul class="band-list">
+                <li>
+                    <span class="band-name">JV</span>
+                    <a class="icon-link" target="_blank" href="https://linktr.ee/jvmusician">
+                        <img src="resources/linktree_white_simple.svg" alt="Linktree" />
+                    </a>
+                </li>
+                <li>
+                    <span class="band-name">Bupp!</span>
+                    <a class="icon-link" target="_blank" href="https://www.instagram.com/bupp_exclamationmark/">
+                        <img src="resources/Instagram_Glyph_White.svg" alt="Instagram" />
+                    </a>
+                </li>
+                <li>
+                    <span class="band-name">Mr. Vales Math Class</span>
+                    <a class="icon-link" target="_blank" href="https://www.instagram.com/mrvalesmathclass/">
+                        <img src="resources/Instagram_Glyph_White.svg" alt="Instagram" />
+                    </a>
+                    <a class="icon-link" target="_blank"
+                        href="https://open.spotify.com/artist/29sg8Tq8gcn6CYNv3KaOYS?si=jnmUpmHFRFCd1c8HMsA9UQ">
+                        <img src="resources/Spotify_Primary_Logo_RGB_Green.png" alt="Spotify" />
+                    </a>
+                </li>
+                <li>
+                    <span class="band-name">DJ JT</span>
+                    <a class="icon-link" target="_blank" href="https://www.sonicswitchyard.com/">
+                        <img src="resources/icons8-internet-100.png" alt="Website" />
+                    </a>
+                </li>
+                <li>
+                    <span class="band-name">Balcony Bridge</span>
+                    <a class="icon-link" target="_blank" href="https://www.instagram.com/balconybridge/">
+                        <img src="resources/Instagram_Glyph_White.svg" alt="Instagram" />
+                    </a>
+                    <a class="icon-link" target="_blank"
+                        href="https://open.spotify.com/artist/6EKGuLU0qvMotA2sMBsevg?si=7yhzKSdXQ0OcjeKNZxhsUQ">
+                        <img src="resources/Spotify_Primary_Logo_RGB_Green.png" alt="Spotify" />
+                    </a>
+                </li>
+                <li>
+                    <span class="band-name">DJ JCKALOT</span>
+                    <a class="icon-link" target="_blank" href="https://www.instagram.com/oldmanlot/">
+                        <img src="resources/Instagram_Glyph_White.svg" alt="Instagram" />
+                    </a>
+                </li>
+            </ul>
         </div>
+
+        <p class="thankyou">
+            Finally, thank you to our three sponsors this year, who helped this event possible.
+            Warmack Group for helping us out with resources and infrastructure to help make this day come
+            together. Our main man with the pig, Bernardo, who hooked us up with the steak that made our
+            new Santa Maria grill shine. And finally, to American Music for donating the monitors and subs we used to
+            bring these incredible bands to life.
+
+            <br />
+            <br />
+            Thank you everyone, it really is a labour of love to put this whole thing together, you truly are magical
+            people.
+
+            <br />
+            <br />
+            Till next time.
+
+            <br />
+            <br />
+            Much love from your pig roasters in chief,
+            <br />
+            <br />
+            Rory & Elliot
+        </p>
+        <img class="thank-you-image" src="./resources/2025/elly-rory-2025.png" />
+
+        <h1 id="links">Links</h1>
+        <p class="textcenter first-text">
+            <a href="https://photos.app.goo.gl/P9Ady7SWCooMU7a18"><u>Photo Album</u></a>
         </p>
         <p class="textcenter second-text">
             <a href="volunteers.html"><u>Our amazing volunteers</u></a>
