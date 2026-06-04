@@ -121,99 +121,225 @@
             max-width: 100%;
         }
 
-        .hero-overlay-top {
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            padding: 20px 16px 50px;
-            background: linear-gradient(rgba(0, 0, 0, 0.78), transparent);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+        /* Partiful link */
+        .partiful-wrap {
+            margin-top: 28px;
         }
 
-        .hero-overlay-bottom {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            padding: 40px 16px 22px;
-            background: linear-gradient(transparent, rgba(0, 0, 0, 0.82));
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .hero-title {
-            font-family: 'Permanent Marker', cursive;
-            font-size: 5.5em;
-            color: #fff;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            margin: 0;
-            line-height: 0.95;
+        .partiful-link {
             display: inline-block;
-            transform: rotate(-2deg);
-            text-shadow:
-                0 0 8px rgba(255, 255, 255, 0.6),
-                0 0 20px rgba(255, 255, 255, 0.3),
-                3px 3px 0 #cc0000,
-                6px 6px 0 rgba(0, 0, 0, 0.5),
-                -1px -1px 0 #000,
-                1px -1px 0 #000,
-                -1px 1px 0 #000,
-                1px 1px 0 #000;
-            filter: blur(0.3px);
+            font-family: 'Rock Salt', cursive;
+            font-size: 1em;
+            color: #fccfa1;
+            text-decoration: none;
+            letter-spacing: 2px;
+            padding: 14px 32px;
+            border: 2px solid #fccfa1;
+            border-radius: 4px;
+            position: relative;
+            transition: color 0.3s, border-color 0.3s;
+            animation: partiful-glow 2.8s ease-in-out infinite;
         }
 
-        .hero-date {
-            font-family: 'Rock Salt', cursive;
-            font-size: 2.4em;
-            color: rgba(255, 100, 20, 0.95);
-            letter-spacing: 2px;
-            margin: 0;
+        .partiful-link:hover {
+            color: #fff;
+            border-color: #fff;
+            animation: none;
+            box-shadow:
+                0 0 10px 2px rgba(252, 207, 161, 0.7),
+                0 0 28px 6px rgba(252, 207, 161, 0.35);
+        }
+
+        @keyframes partiful-glow {
+            0%, 100% {
+                box-shadow:
+                    0 0 6px 1px rgba(252, 207, 161, 0.35),
+                    0 0 16px 3px rgba(252, 207, 161, 0.15);
+                text-shadow: 0 0 8px rgba(252, 207, 161, 0.4);
+            }
+            50% {
+                box-shadow:
+                    0 0 14px 4px rgba(252, 207, 161, 0.65),
+                    0 0 32px 8px rgba(252, 207, 161, 0.25);
+                text-shadow: 0 0 14px rgba(252, 207, 161, 0.75);
+            }
+        }
+
+        /* Schedule drawer */
+        #schedule-drawer {
+            position: fixed;
+            top: 60px;
+            right: 0;
+            z-index: 2000;
+        }
+
+        #open-schedule {
+            position: relative;
+            z-index: 1;
+            background: #fccfa1;
+            color: #222;
+            border: none;
+            border-radius: 8px 0 0 8px;
+            padding: 12px 18px;
+            font-size: 1.2em;
+            cursor: pointer;
+            box-shadow: -2px 2px 8px rgba(0, 0, 0, 0.2);
+            transition: background 0.2s;
+            overflow: visible;
             display: block;
-            transform: rotate(-2deg);
-            text-shadow:
-                0 0 6px rgba(255, 70, 0, 1),
-                0 0 14px rgba(255, 80, 0, 0.7),
-                0 0 28px rgba(255, 100, 0, 0.4),
-                0 0 48px rgba(255, 80, 0, 0.15),
-                2px 4px 10px rgba(0, 0, 0, 0.7);
-            filter: blur(0.5px);
+        }
+
+        .rainbow-border {
+            display: inline-block;
+            padding: 3px;
+            border-radius: 14px 6px 6px 14px;
+            background: conic-gradient(red, orange, yellow, lime, cyan, blue, violet, red);
+            background-size: 200% 200%;
+            animation: rainbow-move 2s linear infinite;
+        }
+
+        @keyframes rainbow-move {
+            100% {
+                background-position: 200% 0;
+            }
+        }
+
+        #open-schedule:hover {
+            background: #ffe3c2;
+        }
+
+        #drawer-content {
+            position: fixed;
+            top: 60px;
+            right: -360px;
+            width: 320px;
+            max-width: 90vw;
+            height: auto;
+            max-height: 80vh;
+            background: #222;
+            color: #fccfa1;
+            box-shadow: -20px 0 40px 0 #fccfa1;
+            padding: 32px 24px 24px 24px;
+            transition: right 0.3s cubic-bezier(.4, 2, .6, 1);
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            overflow-y: auto;
+            border-top-left-radius: 24px;
+            border-bottom-left-radius: 24px;
+            z-index: 2001;
+        }
+
+        #drawer-content.open {
+            right: 0;
+        }
+
+        #close-schedule {
+            position: absolute;
+            top: 18px;
+            right: 18px;
+            background: none;
+            border: none;
+            color: #fccfa1;
+            font-size: 2em;
+            cursor: pointer;
+        }
+
+        #drawer-content h2 {
+            margin-top: 0;
+            margin-bottom: 18px;
+            font-size: 1.5em;
+            color: #fccfa1;
+            text-align: left;
+        }
+
+        #drawer-content p {
+            color: #fff;
+            font-size: 1.1em;
+            font-style: italic;
+            margin: 0;
+        }
+
+        .rainbow-border.hidden {
+            display: none;
         }
 
         @media (max-width: 600px) {
-            .hero-title {
-                font-size: 3em;
-                letter-spacing: 1px;
+            #schedule-drawer {
+                position: fixed;
+                top: 0;
+                left: 0;
+                right: 0;
+                width: 100vw;
+                z-index: 3000;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                pointer-events: none;
             }
 
-            .hero-date {
-                font-size: 1.4em;
-                letter-spacing: 1px;
+            .rainbow-border {
+                margin: 10px auto 0 auto;
+                border-radius: 16px;
+                padding: 2px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: max-content;
+                pointer-events: auto;
+            }
+
+            #open-schedule {
+                border-radius: 12px;
+                padding: 12px 24px;
+                font-size: 1.2em;
+                margin: 0 auto;
+                display: block;
+                position: static;
+                width: auto;
+                box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+            }
+
+            #drawer-content {
+                position: fixed;
+                top: -100vh;
+                left: 0;
+                right: 0;
+                width: 100vw;
+                height: auto;
+                max-height: 90vh;
+                border-radius: 0 0 24px 24px;
+                box-shadow: 0 8px 32px 0 #fccfa1;
+                padding: 32px 12px 24px 12px;
+                transition: top 0.35s cubic-bezier(.4, 2, .6, 1);
+                z-index: 3001;
+                margin: 0 auto;
+                background: #222;
+                pointer-events: auto;
+            }
+
+            #drawer-content.open {
+                top: 0;
             }
         }
     </style>
+    <script src="./drawer.js"></script>
 </head>
 
 <body>
     <div class="container">
         <div class="hero">
-            <img src="resources/2026/pigpit2026-logo.png" alt="Pig Pit 2026" />
-            <div class="hero-overlay-top">
-                <span class="hero-title">Pig Pit 2026</span>
-            </div>
-            <div class="hero-overlay-bottom">
-                <span class="hero-date">Saturday &middot; July 25th &middot; 2026</span>
-            </div>
+            <img src="resources/2026/PigpitflyerPink.png" alt="Pig Pit 2026" />
         </div>
 
-        <p class="textcenter first-text">
+        <div class="partiful-wrap">
+            <a class="partiful-link" href="https://partiful.com/e/lSLl90X5tmZs4fHrA8pb" target="_blank">RSVP on Partiful</a>
+        </div>
+
+        <p class="textcenter second-text">
             <a href="volunteers.html"><u>Our amazing volunteers</u></a>
         </p>
-        <p class="textcenter second-text">
+        <p class="textcenter third-text">
             <a href="costs.html"><u>What does it take to put on pig pit?</u></a>
         </p>
 
@@ -229,6 +355,17 @@
         <p class="copyright">
             Brought to you by Pig Pit Oinc.
         </p>
+    </div>
+
+    <div id="schedule-drawer">
+        <div class="rainbow-border">
+            <button id="open-schedule" aria-label="Open schedule">&#9776; Schedule</button>
+        </div>
+        <div id="drawer-content">
+            <button id="close-schedule" aria-label="Close schedule">&times;</button>
+            <h2>Pig Pit Schedule</h2>
+            <p>Come back soon!</p>
+        </div>
     </div>
 </body>
 
