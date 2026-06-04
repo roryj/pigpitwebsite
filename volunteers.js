@@ -12,9 +12,27 @@ const volunteerBios = {
   "Mike C.":
     "With no clearly defined role, Mike is the all rounder and jack of all trades. Every year he has helped anywhere that needed resources, he has the ability to help with engineering, set up, logistical planning, food, transportation, you name it Mike can help. The need for resourcing goes up every year and Mike has been an invaluable asset to throw at problems.",
   "Carly M.":
-    "Carly is a new addition to the team this year. She is helping with the planning and logistics of the event. She has a great eye for detail and is helping us make sure everything runs smoothly.",
+    "In her first year helping out, Carly worked her magic connecting us to awesome local sponsors and added touches to the decorations.",
+  "Tansy H.":
+    "Tansy has been an attendee for the past few years, and has been an incredible help connecting us to incredible people, and finding new ways to make Pig Pit even better.",
   "Casey H.":
     "Casey has been a long time volunteer and friend of Pig Pit. Prepping food, helping with setup, and artistic planning, her skills and vision has help make the event what it is today.",
+  "Mike G.":
+    "Our staple travel volunteer. Since his first year out, Mike has consistently flown in early to help with Pig Pit. The taskmaster, throw him at the asana board and watch him work. Mike can excel in pretty much any role, but by his own admission, his favorite are the brain off, we need to do this rote work a hundred times, tasks. We love that for him. One of the early guests who really resonated with the prep side, it’s always a good time when he pulls up.",
+  "Jack":
+    "First year Jack came to party, the second year Jack came to solve problems and play sick tunes. Flying in multiple days early, Jack brings a lovely amount of autonomy and task completion to the final week run up of Pig Pit. Helping from construction to sun sails, meat wrapping to fire handling. He even started acting as a delegator of his own, directing some friends of his to do the highly important jobs no one else wants to do, bleach work and digging. Combined with his DJ set, Jack brings the energy.",
+  "Beena":
+    "A stand out volunteer who chose to help her first Pig Pit. Beena is all about community building through events and communal work. Pig Pit was a natural fit! Not only helping with a litany of tasks, but she ran a Yoga sesh during last year in the front yard, one of my favorite events!",
+  "Gabby":
+    "When your partners are so integrated into the planning of Pig Pit, there’s no escaping helping out. Gabby brings wonderful volunteer energy! She’s a jack of all trades, but shines with decorating and vibe setting. Some of the best small touches are from her hand.",
+  "Erik":
+    "No roadie can do it all by themselves. Greg’s right hand man, if you don’t see Greg handling some aspect of the sound, you can bet that Erik will be the one owning it. As we’ve grown, it helps immensely to have another set of hands and a very smart brain to help make sure everything runs smoothly. The unsung heroes of the entertainment.",
+  "Laura Lee & Anna":
+    "Our wonderful merch stand volunteers. They take us the final mile when it comes to not going broke! While we never break even, they do their best job in enticing folks to grab some swag, donate, or just learn more about what it costs to put on Pig Pit. Be sure to stop by and say hi!",
+  "Erin & Kyle":
+    "If you need physical labor, these folks can move boulders. We require volunteers of all types, months out, and the week before. Turns out, getting the space prepared for 250 people requires a lot of effort moving all sorts of heavy items, pounding ground, and cleaning. Not always the top of peoples want to do list, but we love any and all help in those endeavors. Shout out to the big effort they always bring.",
+  "Kelly & Justin":
+    "Staple get-er-dones. We love the task killers, there are a million and one things to do and it always helps to have hands. They helped spruce up the sun sail anchors, set up the sails themselves, and just general yard effort throughout. Every person helps and they’ve always heeded the call.",
 };
 
 /**
@@ -160,20 +178,17 @@ function getVolunteers(year) {
       "Alex D.",
       "Greg G.",
       "Carly M.",
-      "Casey H.",
+      "Tansy H.",
       "Mike C.",
-      "Erin",
-      "Kelly",
-      "Justin",
+      "Mike G.",
+      "Casey H.",
       "Jack",
       "Beena",
-      "Josh",
-      "Tessa",
-      "Laura Lee",
       "Gabby",
-      "Carly",
       "Erik",
-      "Stefan",
+      "Laura Lee & Anna",
+      "Erin & Kyle",
+      "Kelly & Justin",
     ];
   } else {
     return [];
@@ -319,7 +334,10 @@ function drawVolunteerBlurbs(root, volunteers) {
     if (volunteerBios[v.name]) {
       let bio = document.createElement("p");
       bio.className = "volunteer-bio";
-      bio.textContent = volunteerBios[v.name];
+      bio.innerHTML = volunteerBios[v.name].replace(
+        /(https?:\/\/[^\s]+)/g,
+        '<a href="$1" target="_blank" style="color:#fccfa1;">$1</a>'
+      );
       blurb.appendChild(bio);
     }
   });
