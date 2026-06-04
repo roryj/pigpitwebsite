@@ -33,6 +33,8 @@ const volunteerBios = {
     "If you need physical labor, these folks can move boulders. We require volunteers of all types, months out, and the week before. Turns out, getting the space prepared for 250 people requires a lot of effort moving all sorts of heavy items, pounding ground, and cleaning. Not always the top of peoples want to do list, but we love any and all help in those endeavors. Shout out to the big effort they always bring.",
   "Kelly & Justin":
     "Staple get-er-dones. We love the task killers, there are a million and one things to do and it always helps to have hands. They helped spruce up the sun sail anchors, set up the sails themselves, and just general yard effort throughout. Every person helps and they’ve always heeded the call.",
+  "Josh & Tessa":
+    "These great volunteers were an incredible asset helping not only with the setup and decorations, but also making our chalkboard collaborative piece standout.",
 };
 
 /**
@@ -162,8 +164,7 @@ function getVolunteers(year) {
       "Justin",
       "Jack",
       "Beena",
-      "Josh",
-      "Tessa",
+      "Josh & Tessa",
       "Laura Lee",
       "Gabby",
       "Carly",
