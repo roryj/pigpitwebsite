@@ -370,13 +370,14 @@
         .potluck-border {
             padding: 3px;
             border-radius: 18px;
-            background: conic-gradient(from 0deg, #ff0000, #ff9900, #ffee00, #33ff00, #00ffee, #0066ff, #cc00ff, #ff0000);
+            background: conic-gradient(red, orange, yellow, lime, cyan, blue, violet, red);
+            background-size: 200% 200%;
             animation: potluck-shimmer 3s linear infinite;
             box-shadow: 0 0 24px 8px rgba(252, 207, 161, 0.15);
         }
 
         @keyframes potluck-shimmer {
-            100% { filter: hue-rotate(360deg); }
+            100% { background-position: 200% 0; }
         }
 
         .potluck-inner {
