@@ -322,7 +322,158 @@
                 top: 0;
             }
         }
+
+        /* Schedule list */
+        #drawer-content li {
+            margin-bottom: 14px;
+            font-size: 1.1em;
+            color: #fff;
+        }
+
+        .schedule-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .schedule-list li {
+            display: flex;
+            flex-direction: row;
+            align-items: baseline;
+            margin-bottom: 14px;
+            font-size: 1.1em;
+            color: #fff;
+            gap: 16px;
+        }
+
+        .sched-time {
+            min-width: 70px;
+            font-weight: bold;
+            color: #fccfa1;
+            text-align: right;
+            flex-shrink: 0;
+        }
+
+        .sched-artist {
+            color: #fff;
+            font-weight: normal;
+            text-align: left;
+            flex: 1;
+        }
+
+        /* Potluck section */
+        .potluck-section {
+            width: 100%;
+            margin-top: 32px;
+        }
+
+        .potluck-border {
+            padding: 3px;
+            border-radius: 18px;
+            background: conic-gradient(from 0deg, #ff0000, #ff9900, #ffee00, #33ff00, #00ffee, #0066ff, #cc00ff, #ff0000);
+            animation: potluck-shimmer 3s linear infinite;
+            box-shadow: 0 0 24px 8px rgba(252, 207, 161, 0.15);
+        }
+
+        @keyframes potluck-shimmer {
+            100% { filter: hue-rotate(360deg); }
+        }
+
+        .potluck-inner {
+            background: #111;
+            border-radius: 15px;
+            padding: 24px 20px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .potluck-heading {
+            color: #fccfa1;
+            font-family: 'Rock Salt', cursive;
+            font-size: 1em;
+            margin: 0;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+        }
+
+        .potluck-blurb {
+            color: #ccc;
+            font-size: 0.9em;
+            margin: 0;
+            text-align: center;
+            max-width: 420px;
+        }
+
+        .potluck-layout {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            gap: 36px;
+            width: 100%;
+            flex-wrap: wrap;
+        }
+
+        .potluck-link-area {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 14px;
+        }
+
+        .potluck-link {
+            display: inline-block;
+            font-family: 'Rock Salt', cursive;
+            font-size: 0.75em;
+            color: #fccfa1;
+            text-decoration: none;
+            letter-spacing: 1.5px;
+            padding: 16px 20px;
+            border: 2px solid #fccfa1;
+            border-radius: 4px;
+            text-align: center;
+            line-height: 1.6;
+            transition: color 0.3s, border-color 0.3s;
+            animation: partiful-glow 2.8s ease-in-out infinite;
+            max-width: 180px;
+        }
+
+        .potluck-link:hover {
+            color: #fff;
+            border-color: #fff;
+            animation: none;
+            box-shadow: 0 0 10px 2px rgba(252, 207, 161, 0.7), 0 0 28px 6px rgba(252, 207, 161, 0.35);
+        }
+
+        .potluck-total {
+            color: #888;
+            font-size: 0.85em;
+            letter-spacing: 1px;
+            font-style: italic;
+        }
+
+        .potluck-chart-area {
+            max-width: 240px;
+        }
+
+        #potluck-chart {
+            max-width: 240px;
+            max-height: 240px;
+        }
+
+        @media (max-width: 500px) {
+            .potluck-layout {
+                flex-direction: column;
+                gap: 20px;
+            }
+            .potluck-link {
+                max-width: none;
+            }
+        }
     </style>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.3/dist/chart.umd.min.js"></script>
     <script src="./drawer.js"></script>
 </head>
 
@@ -334,6 +485,24 @@
 
         <div class="partiful-wrap">
             <a class="partiful-link" href="https://partiful.com/e/lSLl90X5tmZs4fHrA8pb" target="_blank">RSVP on Partiful</a>
+        </div>
+
+        <div class="potluck-section">
+            <div class="potluck-border">
+                <div class="potluck-inner">
+                    <h3 class="potluck-heading">Potluck</h3>
+                    <p class="potluck-blurb">Pig Pit is a potluck — bring a dish to share! Sign up so we know what's coming.</p>
+                    <div class="potluck-layout">
+                        <div class="potluck-link-area">
+                            <a class="potluck-link" href="https://docs.google.com/spreadsheets/d/1iKmIL41Lz4DFrctW2mPAydLTrk_zS46anFLRHCyOVNo/edit?usp=sharing" target="_blank">Sign up to bring something</a>
+                            <span id="potluck-total" class="potluck-total">Loading...</span>
+                        </div>
+                        <div class="potluck-chart-area">
+                            <canvas id="potluck-chart" width="240" height="240"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <p class="textcenter second-text">
@@ -357,6 +526,91 @@
         </p>
     </div>
 
+    <script>
+        (async function () {
+            const sheetId = '1iKmIL41Lz4DFrctW2mPAydLTrk_zS46anFLRHCyOVNo';
+            const url = `https://docs.google.com/spreadsheets/d/${sheetId}/export?format=csv&gid=0`;
+            const categories = { Main: 0, Side: 0, Dessert: 0, Drink: 0, Other: 0 };
+
+            try {
+                const response = await fetch(url);
+                const text = await response.text();
+                const lines = text.split('\n');
+                for (let i = 1; i < lines.length; i++) {
+                    const cols = lines[i].split(',');
+                    const category = (cols[2] || '').trim().replace(/^"|"$/g, '');
+                    if (Object.prototype.hasOwnProperty.call(categories, category)) {
+                        categories[category]++;
+                    }
+                }
+            } catch (e) {
+                console.warn('Could not load potluck data:', e);
+            }
+
+            const total = Object.values(categories).reduce((a, b) => a + b, 0);
+            const totalEl = document.getElementById('potluck-total');
+            if (totalEl) {
+                totalEl.textContent = total === 0 ? 'No dishes signed up yet — be the first!' : `${total} dish${total !== 1 ? 'es' : ''} signed up`;
+            }
+
+            const canvas = document.getElementById('potluck-chart');
+            if (!canvas || typeof Chart === 'undefined') return;
+
+            const centerTextPlugin = {
+                id: 'centerText',
+                beforeDraw(chart) {
+                    const { ctx: c, chartArea: { top, left, width, height } } = chart;
+                    const t = chart.data.datasets[0].data.reduce((a, b) => a + b, 0);
+                    c.save();
+                    c.font = 'bold 28px "Palatino Linotype", Palatino, serif';
+                    c.fillStyle = '#fccfa1';
+                    c.textAlign = 'center';
+                    c.textBaseline = 'middle';
+                    c.fillText(t, left + width / 2, top + height / 2 - 11);
+                    c.font = '13px "Palatino Linotype", Palatino, serif';
+                    c.fillStyle = '#aaa';
+                    c.fillText('dishes', left + width / 2, top + height / 2 + 15);
+                    c.restore();
+                }
+            };
+
+            new Chart(canvas, {
+                type: 'doughnut',
+                data: {
+                    labels: Object.keys(categories),
+                    datasets: [{
+                        data: Object.values(categories),
+                        backgroundColor: ['#FF6384', '#4BC0C0', '#FFCE56', '#36A2EB', '#9966FF'],
+                        borderColor: '#111',
+                        borderWidth: 3,
+                        hoverOffset: 8,
+                    }]
+                },
+                options: {
+                    cutout: '65%',
+                    animation: { animateRotate: true, duration: 1200 },
+                    plugins: {
+                        legend: {
+                            display: true,
+                            position: 'bottom',
+                            labels: {
+                                color: '#fccfa1',
+                                padding: 12,
+                                font: { size: 13, family: '"Palatino Linotype", Palatino, serif' }
+                            }
+                        },
+                        tooltip: {
+                            callbacks: {
+                                label: function (ctx) { return ` ${ctx.label}: ${ctx.parsed}`; }
+                            }
+                        }
+                    }
+                },
+                plugins: [centerTextPlugin]
+            });
+        })();
+    </script>
+
     <div id="schedule-drawer">
         <div class="rainbow-border">
             <button id="open-schedule" aria-label="Open schedule">&#9776; Schedule</button>
@@ -364,15 +618,17 @@
         <div id="drawer-content">
             <button id="close-schedule" aria-label="Close schedule">&times;</button>
             <h2>Pig Pit Schedule</h2>
-            <li><span class="sched-time">1pm:</span><span class="sched-artist">DJ set by JT</span></li>
-            <li><span class="sched-time">2pm:</span><span class="sched-artist">Pig Pull</span></li>
-            <li><span class="sched-time">3pm:</span><span class="sched-artist">Midpak</span></li>
-            <li><span class="sched-time">5pm:</span><span class="sched-artist">Pink Steam</span></li>
-            <li><span class="sched-time">7pm:</span><span class="sched-artist">Jay Si Proof</span></li>
-            <li><span class="sched-time">7:30pm:</span><span class="sched-artist">Dinner Pull</span></li>
-            <li><span class="sched-time">8:30pm:</span><span class="sched-artist">analog.off & Hope</span></li>
-            <li><span class="sched-time">9pm:</span><span class="sched-artist">Zander</span></li>
-            <li><span class="sched-time">10pm:</span><span class="sched-artist">DJ set by JCKLOT</span></li>
+            <ul class="schedule-list">
+                <li><span class="sched-time">1pm:</span><span class="sched-artist">DJ set by JT</span></li>
+                <li><span class="sched-time">2pm:</span><span class="sched-artist">Pig Pull</span></li>
+                <li><span class="sched-time">3pm:</span><span class="sched-artist">Midpak</span></li>
+                <li><span class="sched-time">5pm:</span><span class="sched-artist">Pink Steam</span></li>
+                <li><span class="sched-time">7pm:</span><span class="sched-artist">Jay Si Proof</span></li>
+                <li><span class="sched-time">7:30pm:</span><span class="sched-artist">Dinner Pull</span></li>
+                <li><span class="sched-time">8:30pm:</span><span class="sched-artist">analog.off & Hope</span></li>
+                <li><span class="sched-time">9pm:</span><span class="sched-artist">Zander</span></li>
+                <li><span class="sched-time">10pm:</span><span class="sched-artist">DJ set by JCKLOT</span></li>
+            </ul>
         </div>
     </div>
 </body>
