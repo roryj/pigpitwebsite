@@ -112,6 +112,33 @@
         .breadcrumb a:hover {
             color: #89a090;
         }
+
+        .year-nav {
+            position: sticky;
+            top: 0;
+            z-index: 10;
+            background-color: #000000;
+            padding: 12px 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 6px;
+            border-bottom: 1px solid #444;
+        }
+
+        .year-nav a {
+            color: #fccfa1;
+            text-decoration: none;
+            padding: 4px 10px;
+            border: 1px solid #665544;
+            border-radius: 4px;
+            font-size: 0.9em;
+        }
+
+        .year-nav a:hover {
+            background-color: #444;
+            color: #fff;
+        }
     </style>
 </head>
 
@@ -139,7 +166,30 @@
                 </p>
             </div>
             <h1>Costs By Year</h1>
-            <p class="cost-title">2025 Costs</p>
+            <nav class="year-nav">
+                <a href="#year-2026">2026</a>
+                <a href="#year-2025">2025</a>
+                <a href="#year-2024">2024</a>
+                <a href="#year-2023">2023</a>
+                <a href="#year-2022">2022</a>
+                <a href="#year-2021">2021</a>
+            </nav>
+            <p id="year-2026" class="cost-title">2026 Costs</p>
+            <div class="table-container">
+                <p id="2026-total-cost" class="total-cost textcenter"></p>
+                <canvas id="2026-costs"></canvas>
+                <table id="2026-cost-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Cost</th>
+                            <th>Category</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+            <p id="year-2025" class="cost-title">2025 Costs</p>
             <div class="table-container">
                 <p id="2025-total-cost" class="total-cost textcenter"></p>
                 <canvas id="2025-costs"></canvas>
@@ -154,7 +204,7 @@
                     <tbody></tbody>
                 </table>
             </div>
-            <p class="cost-title">2024 Costs</p>
+            <p id="year-2024" class="cost-title">2024 Costs</p>
             <div class="table-container">
                 <p id="2024-total-cost" class="total-cost textcenter"></p>
                 <canvas id="2024-costs"></canvas>
@@ -171,7 +221,7 @@
             </div>
         </div>
         <div>
-            <p class="cost-title">2023 Costs</p>
+            <p id="year-2023" class="cost-title">2023 Costs</p>
             <div class="table-container">
                 <p id="2023-total-cost" class="total-cost textcenter"></p>
                 <canvas id="2023-costs"></canvas>
@@ -188,7 +238,7 @@
             </div>
         </div>
         <div>
-            <p class="cost-title">2022 Costs</p>
+            <p id="year-2022" class="cost-title">2022 Costs</p>
             <div class="table-container">
                 <p id="2022-total-cost" class="total-cost textcenter"></p>
                 <canvas id="2022-costs"></canvas>
@@ -205,7 +255,7 @@
             </div>
         </div>
         <div>
-            <p class="cost-title">2021 Costs</p>
+            <p id="year-2021" class="cost-title">2021 Costs</p>
             <div class="table-container">
                 <p id="2021-total-cost" class="total-cost textcenter"></p>
                 <canvas id="2021-costs"></canvas>

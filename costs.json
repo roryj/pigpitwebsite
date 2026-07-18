@@ -712,5 +712,154 @@
                 "cost": 156.50
             }
         ]
+    },
+    {
+        "year": "2026",
+        "expenditures": [
+            {
+                "name": "Logo art to Zander",
+                "type": "Services",
+                "category": "Merch & Donations",
+                "cost": 150.00
+            },
+            {
+                "name": "Porta Potties",
+                "type": "Services",
+                "category": "Operational",
+                "cost": 258.00
+            },
+            {
+                "name": "$2 Million Umbrella insurance",
+                "type": "Services",
+                "category": "Operational",
+                "cost": 1094.00
+            },
+            {
+                "name": "Business cards",
+                "type": "Consumable",
+                "category": "Operational",
+                "cost": 39.00
+            },
+            {
+                "name": "StickerYou merch",
+                "type": "Consumable",
+                "category": "Merch & Donations",
+                "cost": 265.86
+            },
+            {
+                "name": "Bricks and water for pit Home Depot",
+                "type": "Consumable",
+                "category": "Tools & Supplies",
+                "cost": 177.83
+            },
+            {
+                "name": "bench supplies",
+                "type": "Consumable",
+                "category": "Tools & Supplies",
+                "cost": 474.49
+            },
+            {
+                "name": "koozies",
+                "type": "Donation",
+                "category": "Merch & Donations",
+                "cost": 275.96
+            },
+            {
+                "name": "First aid classes (elly, anna, hope)",
+                "type": "Services",
+                "category": "Operational",
+                "cost": 330.00
+            },
+            {
+                "name": "Security",
+                "type": "Services",
+                "category": "Operational",
+                "cost": 1000.00
+            },
+            {
+                "name": "pit supplies",
+                "type": "Consumable",
+                "category": "Tools & Supplies",
+                "cost": 512.47
+            },
+            {
+                "name": "pig stamps",
+                "type": "Reusable",
+                "category": "Tools & Supplies",
+                "cost": 46.67
+            },
+            {
+                "name": "Pavers",
+                "type": "Reusable",
+                "category": "Tools & Supplies",
+                "cost": 39.80
+            },
+            {
+                "name": "propane & blade",
+                "type": "Consumable",
+                "category": "Tools & Supplies",
+                "cost": 97.24
+            },
+            {
+                "name": "pavers & conduit",
+                "type": "Reusable",
+                "category": "Tools & Supplies",
+                "cost": 64.63
+            },
+            {
+                "name": "pavers",
+                "type": "Reusable",
+                "category": "Tools & Supplies",
+                "cost": 39.80
+            },
+            {
+                "name": "Tongs",
+                "type": "Reusable",
+                "category": "Tools & Supplies",
+                "cost": 88.44
+            },
+            {
+                "name": "gravel and sand",
+                "type": "Consumable",
+                "category": "Tools & Supplies",
+                "cost": 303.29
+            },
+            {
+                "name": "pavers & various items",
+                "type": "Reusable",
+                "category": "Tools & Supplies",
+                "cost": 81.25
+            },
+            {
+                "name": "Warmack group sponsorship",
+                "type": "Donation",
+                "category": "Sponsorship",
+                "cost": -2000.00
+            },
+            {
+                "name": "flyer & schedule edits",
+                "type": "Services",
+                "category": "Operational",
+                "cost": 55.00
+            },
+            {
+                "name": "Alex Pit Labor",
+                "type": "Services",
+                "category": "Operational",
+                "cost": 2000.00
+            },
+            {
+                "name": "thrifted tees 1",
+                "type": "Consumable",
+                "category": "Merch & Donations",
+                "cost": 74.28
+            },
+            {
+                "name": "thrifted tees 2",
+                "type": "Consumable",
+                "category": "Merch & Donations",
+                "cost": 64.02
+            }
+        ]
     }
 ]
