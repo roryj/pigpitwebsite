@@ -18,6 +18,11 @@ const faqItems = [
       "Elliot's house in the South End near the Othello light rail station. An exact address will be added closer to the event.",
   },
   {
+    question: "How do I get there?",
+    answer:
+      "We always recommend public transit. Our nearest light rail station is Othello. Our nearest bus stop is MLK and Graham. See you soon!",
+  },
+  {
     question: "Can I bring my pet?",
     answer:
       "Well-behaved pets are welcome at Pig Pit. Human discretion is encouraged.",
