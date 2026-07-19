@@ -1,41 +1,101 @@
+/**
+ * Bios for each volunteer, keyed by name and then by year.
+ *
+ * A "default" entry is used as a fallback when there's no bio specific to
+ * the year being viewed. Add a year key (e.g. "2026") alongside "default"
+ * to override the bio for that year only.
+ */
 const volunteerBios = {
-  "Xen E.":
-    "As Pig Pit has grown it has highlighted a need for better organization, delegation, and planning. Xen steps in as a prominent project manager providing a much needed refactoring of our entire preparation process. Bringing us into the 21st century we actually have tasks, owners, and an asana board thanks to him. Plus if you like the quality of your merch, Xen also handles the sourcing of art and goods!",
-  "Hope M.":
-    "Hope focuses on helping us more dutifully track expenses, people, projects, and last mile planning. There are always a million and one things to own and do for Pig Pit and when in doubt, Hope often is the first to pick up ownership. In addition to the behind the scenes work, look out for some new activities and decoration theming this year!",
-  "Maseo B.":
-    "Our music man, the best talent acquisitioner we could have asked for. Maseo himself plays in a band in Seattle and is fantastic at networking, finding the local music willing to play, and managing all of the connection and booking process. Day of, you can find him near the stage, shepherding the bands, keeping things on time, and if you’re lucky, MCing. ",
-  "Alex D.":
-    "As we grow the need for more and more engineering projects becomes apparent. You like the stage? Alex built it. You like the gazebo? Alex built it. You like the grill? Alex built it. A master at his craft, give him a clean sheet of requirements and you’ll get a design that’s overbuilt and under cost. If you want to give him thanks, you can find him behind one of the cameras at Pig Pit, he also moonlights as a YouTuber so check him out at https://www.youtube.com/@MethodicalMaker",
-  "Greg G.":
-    "Music doesn’t play without sound, our king roadie, without his help getting the bands is only half the battle. Greg brings a professionalism and good attitude that is irreplaceable. I can’t remember a single audio issue that has happened at any Pig Pit and I can’t imagine one happening in the future. He stays busy during the entire event, but go checkout his stack during the event if you like audio tech, just don’t distract him too much!",
-  "Mike C.":
-    "With no clearly defined role, Mike is the all rounder and jack of all trades. Every year he has helped anywhere that needed resources, he has the ability to help with engineering, set up, logistical planning, food, transportation, you name it Mike can help. The need for resourcing goes up every year and Mike has been an invaluable asset to throw at problems.",
-  "Carly M.":
-    "In her first year helping out, Carly worked her magic connecting us to awesome local sponsors and added touches to the decorations.",
-  "Tansy H.":
-    "Tansy has been an attendee for the past few years, and has been an incredible help connecting us to incredible people, and finding new ways to make Pig Pit even better.",
-  "Casey H.":
-    "Casey has been a long time volunteer and friend of Pig Pit. Prepping food, helping with setup, and artistic planning, her skills and vision has help make the event what it is today.",
-  "Mike G.":
-    "Our staple travel volunteer. Since his first year out, Mike has consistently flown in early to help with Pig Pit. The taskmaster, throw him at the asana board and watch him work. Mike can excel in pretty much any role, but by his own admission, his favorite are the brain off, we need to do this rote work a hundred times, tasks. We love that for him. One of the early guests who really resonated with the prep side, it’s always a good time when he pulls up.",
-  "Jack":
-    "First year Jack came to party, the second year Jack came to solve problems and play sick tunes. Flying in multiple days early, Jack brings a lovely amount of autonomy and task completion to the final week run up of Pig Pit. Helping from construction to sun sails, meat wrapping to fire handling. He even started acting as a delegator of his own, directing some friends of his to do the highly important jobs no one else wants to do, bleach work and digging. Combined with his DJ set, Jack brings the energy.",
-  "Beena":
-    "A stand out volunteer who chose to help her first Pig Pit. Beena is all about community building through events and communal work. Pig Pit was a natural fit! Not only helping with a litany of tasks, but she ran a Yoga sesh during last year in the front yard, one of my favorite events!",
-  "Gabby":
-    "When your partners are so integrated into the planning of Pig Pit, there’s no escaping helping out. Gabby brings wonderful volunteer energy! She’s a jack of all trades, but shines with decorating and vibe setting. Some of the best small touches are from her hand.",
-  "Erik":
-    "No roadie can do it all by themselves. Greg’s right hand man, if you don’t see Greg handling some aspect of the sound, you can bet that Erik will be the one owning it. As we’ve grown, it helps immensely to have another set of hands and a very smart brain to help make sure everything runs smoothly. The unsung heroes of the entertainment.",
-  "Laura Lee & Anna":
-    "Our wonderful merch stand volunteers. They take us the final mile when it comes to not going broke! While we never break even, they do their best job in enticing folks to grab some swag, donate, or just learn more about what it costs to put on Pig Pit. Be sure to stop by and say hi!",
-  "Erin & Kyle":
-    "If you need physical labor, these folks can move boulders. We require volunteers of all types, months out, and the week before. Turns out, getting the space prepared for 250 people requires a lot of effort moving all sorts of heavy items, pounding ground, and cleaning. Not always the top of peoples want to do list, but we love any and all help in those endeavors. Shout out to the big effort they always bring.",
-  "Kelly & Justin":
-    "Staple get-er-dones. We love the task killers, there are a million and one things to do and it always helps to have hands. They helped spruce up the sun sail anchors, set up the sails themselves, and just general yard effort throughout. Every person helps and they’ve always heeded the call.",
-  "Josh & Tessa":
-    "These great volunteers were an incredible asset helping not only with the setup and decorations, but also making our chalkboard collaborative piece standout.",
+  "Xen E.": {
+    default:
+      "As Pig Pit has grown it has highlighted a need for better organization, delegation, and planning. Xen steps in as a prominent project manager providing a much needed refactoring of our entire preparation process. Bringing us into the 21st century we actually have tasks, owners, and an asana board thanks to him. Plus if you like the quality of your merch, Xen also handles the sourcing of art and goods!",
+  },
+  "Hope M.": {
+    default:
+      "Hope focuses on helping us more dutifully track expenses, people, projects, and last mile planning. There are always a million and one things to own and do for Pig Pit and when in doubt, Hope often is the first to pick up ownership. In addition to the behind the scenes work, look out for some new activities and decoration theming this year!",
+  },
+  "Maseo B.": {
+    default:
+      "Our music man, the best talent acquisitioner we could have asked for. Maseo himself plays in a band in Seattle and is fantastic at networking, finding the local music willing to play, and managing all of the connection and booking process. Day of, you can find him near the stage, shepherding the bands, keeping things on time, and if you’re lucky, MCing. ",
+  },
+  "Alex D.": {
+    default:
+      "As we grow the need for more and more engineering projects becomes apparent. You like the stage? Alex built it. You like the gazebo? Alex built it. You like the grill? Alex built it. A master at his craft, give him a clean sheet of requirements and you’ll get a design that’s overbuilt and under cost. If you want to give him thanks, you can find him behind one of the cameras at Pig Pit, he also moonlights as a YouTuber so check him out at https://www.youtube.com/@MethodicalMaker",
+  },
+  "Greg G.": {
+    default:
+      "Music doesn’t play without sound, our king roadie, without his help getting the bands is only half the battle. Greg brings a professionalism and good attitude that is irreplaceable. I can’t remember a single audio issue that has happened at any Pig Pit and I can’t imagine one happening in the future. He stays busy during the entire event, but go checkout his stack during the event if you like audio tech, just don’t distract him too much!",
+  },
+  "Mike C.": {
+    default:
+      "With no clearly defined role, Mike is the all rounder and jack of all trades. Every year he has helped anywhere that needed resources, he has the ability to help with engineering, set up, logistical planning, food, transportation, you name it Mike can help. The need for resourcing goes up every year and Mike has been an invaluable asset to throw at problems.",
+  },
+  "Carly M.": {
+    default:
+      "In her first year helping out, Carly worked her magic connecting us to awesome local sponsors and added touches to the decorations.",
+  },
+  "Tansy H.": {
+    default:
+      "Tansy has been an attendee for the past few years, and has been an incredible help connecting us to incredible people, and finding new ways to make Pig Pit even better.",
+  },
+  "Casey H.": {
+    default:
+      "Casey has been a long time volunteer and friend of Pig Pit. Prepping food, helping with setup, and artistic planning, her skills and vision has help make the event what it is today.",
+  },
+  "Mike G.": {
+    default:
+      "Our staple travel volunteer. Since his first year out, Mike has consistently flown in early to help with Pig Pit. The taskmaster, throw him at the asana board and watch him work. Mike can excel in pretty much any role, but by his own admission, his favorite are the brain off, we need to do this rote work a hundred times, tasks. We love that for him. One of the early guests who really resonated with the prep side, it’s always a good time when he pulls up.",
+  },
+  "Jack": {
+    default:
+      "First year Jack came to party, the second year Jack came to solve problems and play sick tunes. Flying in multiple days early, Jack brings a lovely amount of autonomy and task completion to the final week run up of Pig Pit. Helping from construction to sun sails, meat wrapping to fire handling. He even started acting as a delegator of his own, directing some friends of his to do the highly important jobs no one else wants to do, bleach work and digging. Combined with his DJ set, Jack brings the energy.",
+  },
+  "Beena": {
+    default:
+      "A stand out volunteer who chose to help her first Pig Pit. Beena is all about community building through events and communal work. Pig Pit was a natural fit! Not only helping with a litany of tasks, but she ran a Yoga sesh during last year in the front yard, one of my favorite events!",
+  },
+  "Gabby": {
+    default:
+      "When your partners are so integrated into the planning of Pig Pit, there’s no escaping helping out. Gabby brings wonderful volunteer energy! She’s a jack of all trades, but shines with decorating and vibe setting. Some of the best small touches are from her hand.",
+  },
+  "Erik": {
+    default:
+      "No roadie can do it all by themselves. Greg’s right hand man, if you don’t see Greg handling some aspect of the sound, you can bet that Erik will be the one owning it. As we’ve grown, it helps immensely to have another set of hands and a very smart brain to help make sure everything runs smoothly. The unsung heroes of the entertainment.",
+  },
+  "Laura Lee & Anna": {
+    default:
+      "Our wonderful merch stand volunteers. They take us the final mile when it comes to not going broke! While we never break even, they do their best job in enticing folks to grab some swag, donate, or just learn more about what it costs to put on Pig Pit. Be sure to stop by and say hi!",
+  },
+  "Erin & Kyle": {
+    default:
+      "If you need physical labor, these folks can move boulders. We require volunteers of all types, months out, and the week before. Turns out, getting the space prepared for 250 people requires a lot of effort moving all sorts of heavy items, pounding ground, and cleaning. Not always the top of peoples want to do list, but we love any and all help in those endeavors. Shout out to the big effort they always bring.",
+  },
+  "Kelly & Justin": {
+    default:
+      "Staple get-er-dones. We love the task killers, there are a million and one things to do and it always helps to have hands. They helped spruce up the sun sail anchors, set up the sails themselves, and just general yard effort throughout. Every person helps and they’ve always heeded the call.",
+  },
+  "Josh & Tessa": {
+    default:
+      "These great volunteers were an incredible asset helping not only with the setup and decorations, but also making our chalkboard collaborative piece standout.",
+  },
 };
+
+/**
+ * Gets the bio for a volunteer in a given year, falling back to their
+ * default bio if no year-specific one has been written.
+ *
+ * @param {String} name
+ * @param {Number} year
+ * @returns {String|undefined}
+ */
+function getVolunteerBio(name, year) {
+  const bios = volunteerBios[name];
+  if (!bios) {
+    return undefined;
+  }
+
+  return bios[year] ?? bios.default;
+}
 
 /**
  * Stores the current state and details for a bubble
@@ -198,6 +258,7 @@ function getVolunteers(year) {
 
 (async function () {
   let volunteerBubbles = [];
+  let currentYear = null;
 
   const debugDiv = document.getElementById("debug-info");
 
@@ -216,7 +277,7 @@ function getVolunteers(year) {
       document.body.classList.add("no-overflow");
     } else {
       canvas.style.visibility = "hidden";
-      drawVolunteerBlurbs(volunteerBlurbs, volunteerBubbles);
+      drawVolunteerBlurbs(volunteerBlurbs, volunteerBubbles, currentYear);
       volunteerBlurbs.style.display = "block";
       document.body.classList.remove("no-overflow");
     }
@@ -242,11 +303,12 @@ function getVolunteers(year) {
       });
 
       button.classList.add("selected");
+      currentYear = year;
       const volunteers = getVolunteers(year);
       volunteerBubbles = volunteers.map((v) => {
         return new VolunteerBubble(v, innerWidth, innerHeight);
       });
-      drawVolunteerBlurbs(volunteerBlurbs, volunteerBubbles);
+      drawVolunteerBlurbs(volunteerBlurbs, volunteerBubbles, currentYear);
     });
 
     if (year == 2026) {
@@ -316,7 +378,7 @@ function chooseRandomColour() {
   return "hsla(" + Math.random() * 360 + ", 100%, 50%, 1)";
 }
 
-function drawVolunteerBlurbs(root, volunteers) {
+function drawVolunteerBlurbs(root, volunteers, year) {
   // remove any existing volunteer-blurb elements that were created
   const existing = root.querySelectorAll(".volunteer-blurb");
   existing.forEach((b) => {
@@ -332,10 +394,11 @@ function drawVolunteerBlurbs(root, volunteers) {
     name.textContent = v.name;
     blurb.appendChild(name);
 
-    if (volunteerBios[v.name]) {
+    const bioText = getVolunteerBio(v.name, year);
+    if (bioText) {
       let bio = document.createElement("p");
       bio.className = "volunteer-bio";
-      bio.innerHTML = volunteerBios[v.name].replace(
+      bio.innerHTML = bioText.replace(
         /(https?:\/\/[^\s]+)/g,
         '<a href="$1" target="_blank" style="color:#fccfa1;">$1</a>'
       );
