@@ -53,7 +53,7 @@ const faqItems = [
   {
     question: "What if there's bad air quality?",
     answer:
-      "Okay, this is a serious one. We'll keep an eye on AIQ forecasts and keep you all informed via Instagram and Partiful.",
+      "Okay, this is a serious one. We'll keep an eye on AQI forecasts and keep you all informed via Instagram and Partiful.",
   },
   {
     question: "Do I have to pay to go to Pig Pit?",
