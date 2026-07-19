@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style>
+        body {
+            background-color: #000000;
+            margin: 0;
+            padding: 0;
+            font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            text-align: center;
+            color: #fccfa1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 90%;
+            max-width: 800px;
+            margin: auto;
+        }
+
+        .breadcrumb {
+            text-align: left;
+            padding-top: 20px;
+        }
+
+        .breadcrumb a {
+            text-align: left;
+            padding-top: 20px;
+            color: #ddd;
+        }
+
+        .breadcrumb a:hover {
+            color: #89a090;
+        }
+
+        .summary {
+            text-align: left;
+        }
+
+        #faq-list {
+            text-align: left;
+            margin-top: 20px;
+        }
+
+        .faq-item {
+            padding: 16px 0;
+            border-bottom: 1px solid #444;
+        }
+
+        .faq-item:last-child {
+            border-bottom: none;
+        }
+
+        .faq-question {
+            font-size: 1.3em;
+            font-weight: bold;
+            color: #fccfa1;
+            cursor: pointer;
+        }
+
+        .faq-question:hover {
+            color: #89a090;
+        }
+
+        .faq-answer {
+            font-size: 1.1em;
+            color: #ddd;
+            margin: 12px 0 0 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="breadcrumb">
+            <a href="index.html">
+                &lt;= back to the invite </a>
+        </div>
+        <div>
+            <h1>Frequently Asked Questions</h1>
+            <p class="summary">
+                Got questions about Pig Pit? Here's what we've got answered so far —
+                more to come!
+            </p>
+        </div>
+        <div id="faq-list"></div>
+    </div>
+
+    <script src="faq.js"></script>
+</body>
+
+</html>
