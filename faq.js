@@ -15,7 +15,7 @@ const faqItems = [
   {
     question: "Where is the event?",
     answer:
-      "Elliot's house in the South End near the Othello light rail station. An exact address will be added closer to the event.",
+      "Elliot's house in the South End near the Othello light rail station. Address is in the Partiful link.",
   },
   {
     question: "How do I get there?",
